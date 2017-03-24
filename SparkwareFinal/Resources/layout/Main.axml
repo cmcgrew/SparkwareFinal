@@ -3,5 +3,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:theme="@style/Theme.AppCompat.DayNight">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+<!--This is where each contect page will go-->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
 </LinearLayout>

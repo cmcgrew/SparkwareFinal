@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <!--Options with icons-->
+  <item
+       android:id="@+id/home"
+       android:icon="@drawable/home"
+       app:showAsAction="always"
+       android:title="Home" />
+  <item
+       android:id="@+id/discover"
+       android:icon="@drawable/globe"
+       app:showAsAction="always"
+       android:title="Discover" />
+  <item
+       android:id="@+id/submitidea"
+       android:icon="@drawable/idea"
+       app:showAsAction="always"
+       android:title="Submit Idea" />
+  <item
+       android:id="@+id/account"
+       android:icon="@drawable/account"
+       app:showAsAction="always"
+       android:title="Account" />
+  
+  <!--Preferences Menu Options-->
+  <item
+       android:id="@+id/achievements"
+       app:showAsAction="never"
+       android:title="Achievments" />
+  <item
+       android:id="@+id/logout"
+       app:showAsAction="never"
+       android:title="Log Out" />
+</menu>
