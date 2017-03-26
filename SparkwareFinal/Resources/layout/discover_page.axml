@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-              android:id="@+id/discoverLinearLayout">
+    android:id="@+id/discoverLinearLayout">
     <TextView
         android:text="Discover Fragment WOOO WHOOOO"
         android:layout_width="match_parent"
