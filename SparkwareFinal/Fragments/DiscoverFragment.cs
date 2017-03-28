@@ -20,6 +20,8 @@ namespace SparkwareFinal.Fragments
     public class DiscoverFragment : Android.Support.V4.App.Fragment
     {
         List<Innovation> innovations;
+        TableLayout tableLayout;
+        LinearLayout parent;
         ScrollView scrollView;
         Innovation innovation1;
         Innovation innovation2;
@@ -85,17 +87,24 @@ namespace SparkwareFinal.Fragments
 
             innovations.Add(innovation2);
 
-            LinearLayout parent = view.FindViewById<LinearLayout>(Resource.Id.discoverLinearLayout);
+            parent = view.FindViewById<LinearLayout>(Resource.Id.discoverLinearLayout);
             scrollView = new ScrollView(this.Context);
             LinearLayout.LayoutParams scrollParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
             scrollView.LayoutParameters = scrollParams;
             parent.AddView(scrollView);
 
-            TableLayout tableLayout = new TableLayout(this.Context);
+            tableLayout = new TableLayout(this.Context);
             LinearLayout.LayoutParams tableParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
             tableLayout.LayoutParameters = tableParams;
             scrollView.AddView(tableLayout);
 
+            DisplayInnovations();
+
+            return view;
+        }
+
+        public void DisplayInnovations()
+        {
             for (int i = 0; i < innovations.Count; i++)
             {
                 // Created LinearLayout (Container for image, and text) 
@@ -169,8 +178,6 @@ namespace SparkwareFinal.Fragments
 
                 innovationTextContainer.AddView(ratingbar);
             }
-
-            return view;
         }
     }
 }
