@@ -1687,6 +1687,9 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0a0077
 			public const int BankingRadioButton = 2131361911;
 			
+			// aapt resource value: 0x7f0a007c
+			public const int EdtEnterEmail = 2131361916;
+			
 			// aapt resource value: 0x7f0a0075
 			public const int InsuranceRadioButton = 2131361909;
 			
@@ -1696,11 +1699,11 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0a0078
 			public const int OtherRadioButton = 2131361912;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int account = 2131361918;
+			// aapt resource value: 0x7f0a0080
+			public const int account = 2131361920;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int achievements = 2131361919;
+			// aapt resource value: 0x7f0a0081
+			public const int achievements = 2131361921;
 			
 			// aapt resource value: 0x7f0a0060
 			public const int action0 = 2131361888;
@@ -1777,8 +1780,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0a0022
 			public const int bottom = 2131361826;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int btnSubmitFeedback = 2131361915;
+			// aapt resource value: 0x7f0a007d
+			public const int btnSubmitFeedback = 2131361917;
 			
 			// aapt resource value: 0x7f0a002e
 			public const int buttonPanel = 2131361838;
@@ -1813,8 +1816,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0a000c
 			public const int disableHome = 2131361804;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int discover = 2131361916;
+			// aapt resource value: 0x7f0a007e
+			public const int discover = 2131361918;
 			
 			// aapt resource value: 0x7f0a0056
 			public const int discoverLinearLayout = 2131361878;
@@ -1870,8 +1873,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0a002b
 			public const int list_item = 2131361835;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int logout = 2131361920;
+			// aapt resource value: 0x7f0a0082
+			public const int logout = 2131361922;
 			
 			// aapt resource value: 0x7f0a0063
 			public const int media_actions = 2131361891;
@@ -1999,8 +2002,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0a0052
 			public const int submit_area = 2131361874;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int submitidea = 2131361917;
+			// aapt resource value: 0x7f0a007f
+			public const int submitidea = 2131361919;
 			
 			// aapt resource value: 0x7f0a000b
 			public const int tabMode = 2131361803;
@@ -2049,6 +2052,9 @@ namespace SparkwareFinal
 			
 			// aapt resource value: 0x7f0a0057
 			public const int tvTest = 2131361879;
+			
+			// aapt resource value: 0x7f0a007b
+			public const int txtEnterEmail = 2131361915;
 			
 			// aapt resource value: 0x7f0a007a
 			public const int txtEnterFeedback = 2131361914;
