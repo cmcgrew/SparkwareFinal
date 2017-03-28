@@ -6,8 +6,20 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-        android:text="Made it to the home page!!!!"
+        android:text="USAA LABS"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:textSize="50sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/tvHomeTitle" />
+    <TextView
+        android:text="USAA Labs provides members the opportunity to engage and provide feedback on new innovations, concepts and exclusive pilots. USAA Labs puts you, the innovator, at the forefront of innovation by providing a vibrant community where members can innovate for members."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:id="@+id/tvHomeDescription" />
 </LinearLayout>

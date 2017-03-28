@@ -13,14 +13,20 @@ using Android.Widget;
 using Android.Support.V4.App;
 using static Android.Support.V4.View.ViewPager;
 using Android.Graphics;
+using Android.Graphics.Drawables;
 
 namespace SparkwareFinal.Fragments
 {
     public class DiscoverFragment : Android.Support.V4.App.Fragment
     {
         List<Innovation> innovations;
+        ScrollView scrollView;
         Innovation innovation1;
         Innovation innovation2;
+        Innovation innovation3;
+        Innovation innovation4;
+        Innovation innovation5;
+
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,6 +47,8 @@ namespace SparkwareFinal.Fragments
             innovation1.DescriptionLong = "Depositing a check through the USAA Mobile App shouldn't be a complicated task, but for our visually impaired members it was nearly impossible. Now, voice commands guide members through the process, telling them to \"push out,\" \"pull in\" or \"move right\" to capture a check's image and deposit it into their account.";
             innovation1.NumberOfLikes = 2000;
 
+            innovations.Add(innovation1);
+
             innovation2 = new Innovation();
 
             innovation2.Title = "This is innovation 2";
@@ -50,27 +58,44 @@ namespace SparkwareFinal.Fragments
 
             innovations.Add(innovation2);
 
+            innovation3 = new Innovation();
+
+            innovation3.Title = "This is innovation 3";
+            innovation3.DescriptionShort = "Innovation 3 short description";
+            innovation3.DescriptionLong = "Innovation 3 short description";
+            innovation3.NumberOfLikes = 2000;
+
+            innovations.Add(innovation3);
+
+            innovation4 = new Innovation();
+
+            innovation4.Title = "This is innovation 4";
+            innovation4.DescriptionShort = "Innovation 4 short description";
+            innovation4.DescriptionLong = "Innovation 4 short description";
+            innovation4.NumberOfLikes = 2000;
+
+            innovations.Add(innovation4);
+
+            innovation5 = new Innovation();
+
+            innovation5.Title = "This is innovation 5";
+            innovation5.DescriptionShort = "Innovation 5 short description";
+            innovation5.DescriptionLong = "Innovation 5 short description";
+            innovation5.NumberOfLikes = 2000;
+
+            innovations.Add(innovation2);
+
             LinearLayout parent = view.FindViewById<LinearLayout>(Resource.Id.discoverLinearLayout);
-            //LinearLayout innovationContainer = new LinearLayout(this.Context);
-            //innovationContainer.Orientation = Orientation.Horizontal;
-            //innovationContainer.SetBackgroundResource(Resource.Drawable.customshape);
-            //LinearLayout.LayoutParams containerParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, 450);
-            //innovationContainer.LayoutParameters = containerParams;
-            //innovationContainer.WeightSum = 100;
-            //innovationContainer.Id = 0;
+            scrollView = new ScrollView(this.Context);
+            LinearLayout.LayoutParams scrollParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
+            scrollView.LayoutParameters = scrollParams;
+            parent.AddView(scrollView);
 
-            //LinearLayout innovationContainer2 = new LinearLayout(this.Context);
-            //innovationContainer2.Orientation = Orientation.Horizontal;
-            //innovationContainer2.SetBackgroundResource(Resource.Drawable.customshape);
-            //LinearLayout.LayoutParams containerParams2 = new LinearLayout.LayoutParams(LayoutParams.MatchParent, 450);
-            //innovationContainer2.LayoutParameters = containerParams;
-            //innovationContainer2.WeightSum = 100;
-            //innovationContainer2.Id = 1;
+            TableLayout tableLayout = new TableLayout(this.Context);
+            LinearLayout.LayoutParams tableParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
+            tableLayout.LayoutParameters = tableParams;
+            scrollView.AddView(tableLayout);
 
-            //parent.AddView(innovationContainer2);
-
-
-            //parent.AddView(innovationContainer);
             for (int i = 0; i < innovations.Count; i++)
             {
                 // Created LinearLayout (Container for image, and text) 
@@ -78,19 +103,19 @@ namespace SparkwareFinal.Fragments
                 innovationContainer.Orientation = Orientation.Horizontal;
                 innovationContainer.SetBackgroundResource(Resource.Drawable.customshape);
                 LinearLayout.LayoutParams containerParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, 450);
+                //containerParams.SetMargins(0, 0, 0, 1000);
                 innovationContainer.LayoutParameters = containerParams;
                 innovationContainer.WeightSum = 100;
-                innovationContainer.Id = 0;
+                //innovationContainer.Id = 0;
 
 
-                parent.AddView(innovationContainer);
+                tableLayout.AddView(innovationContainer);
 
                 ImageView innovationImageView = new ImageView(this.Context);
-                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(350, 350);
-                imageParams.Gravity = GravityFlags.Center;
+                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(350, LayoutParams.MatchParent);
+                imageParams.SetMargins(0, 0, 0, 25);
                 innovationImageView.LayoutParameters = imageParams;
                 innovationImageView.SetBackgroundResource(Resource.Drawable.VoiceGuidedDeposits);
-                //innovationImageView.SetPadding(10, 10, 10, 10);
                 innovationImageView.Visibility = ViewStates.Visible;
 
                 innovationContainer.AddView(innovationImageView);
@@ -98,9 +123,10 @@ namespace SparkwareFinal.Fragments
                 LinearLayout innovationTextContainer = new LinearLayout(this.Context);
                 innovationTextContainer.Orientation = Orientation.Vertical;
                 LinearLayout.LayoutParams innovationTextContainerParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
+                innovationTextContainerParams.SetMargins(25, 0, 0, 0);
                 innovationTextContainer.LayoutParameters = innovationTextContainerParams;
                 innovationTextContainer.WeightSum = 100;
-                innovationTextContainer.SetBackgroundColor(Color.Green);
+                //innovationTextContainer.SetBackgroundColor(Color.Green);
 
                 innovationContainer.AddView(innovationTextContainer);
 
@@ -128,6 +154,20 @@ namespace SparkwareFinal.Fragments
                 innovationLikesTitleTextView.SetTextSize(ComplexUnitType.Sp, 15.0f);
 
                 innovationTextContainer.AddView(innovationLikesTitleTextView);
+
+                RatingBar ratingbar = new RatingBar(this.Context);
+                ratingbar.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+                ratingbar.Rating = 0;
+                ratingbar.NumStars = 5;
+                ratingbar.StepSize = 1.0f;
+                ratingbar.Visibility = ViewStates.Visible;
+                ratingbar.SetBackgroundColor(Color.Black);
+                ratingbar.RatingBarChange += (o, e) =>
+                {
+                    Toast.MakeText(this.Context, "New Rating: " + ratingbar.Rating.ToString(), ToastLength.Short).Show();
+                };
+
+                innovationTextContainer.AddView(ratingbar);
             }
 
             return view;
