@@ -46,7 +46,7 @@ namespace SparkwareFinal.Fragments
             innovation1 = new Innovation();
 
             innovation1.Title = "Voice Guided Deposits";
-            innovation1.Id = 0;
+            innovation1.Id = (int)typeof(Resource.Drawable).GetField("VoiceGuidedDeposits").GetValue(null);
             innovation1.DescriptionShort = "Deposit a check through the USAA Mobile App using voice commands.";
             innovation1.DescriptionLong = "Depositing a check through the USAA Mobile App shouldn't be a complicated task, but for our visually impaired members it was nearly impossible. Now, voice commands guide members through the process, telling them to \"push out,\" \"pull in\" or \"move right\" to capture a check's image and deposit it into their account.";
             innovation1.NumberOfLikes = 2000;
@@ -56,7 +56,7 @@ namespace SparkwareFinal.Fragments
             innovation2 = new Innovation();
 
             innovation2.Title = "This is innovation 2";
-            innovation2.Id = 1;
+            innovation2.Id = (int)typeof(Resource.Drawable).GetField("globe").GetValue(null);
             innovation2.DescriptionShort = "Innovation 2 short description";
             innovation2.DescriptionLong = "Innovation 2 short description";
             innovation2.NumberOfLikes = 2000;
@@ -66,7 +66,7 @@ namespace SparkwareFinal.Fragments
             innovation3 = new Innovation();
 
             innovation3.Title = "This is innovation 3";
-            innovation3.Id = 2;
+            innovation3.Id = (int)typeof(Resource.Drawable).GetField("idea").GetValue(null);
             innovation3.DescriptionShort = "Innovation 3 short description";
             innovation3.DescriptionLong = "Innovation 3 short description";
             innovation3.NumberOfLikes = 2000;
@@ -76,7 +76,7 @@ namespace SparkwareFinal.Fragments
             innovation4 = new Innovation();
 
             innovation4.Title = "This is innovation 4";
-            innovation4.Id = 3;
+            innovation4.Id = (int)typeof(Resource.Drawable).GetField("Icon").GetValue(null);
             innovation4.DescriptionShort = "Innovation 4 short description";
             innovation4.DescriptionLong = "Innovation 4 short description";
             innovation4.NumberOfLikes = 2000;
@@ -86,7 +86,7 @@ namespace SparkwareFinal.Fragments
             innovation5 = new Innovation();
 
             innovation5.Title = "This is innovation 5";
-            innovation5.Id = 4;
+            innovation5.Id = (int)typeof(Resource.Drawable).GetField("home").GetValue(null);
             innovation5.DescriptionShort = "Innovation 5 short description";
             innovation5.DescriptionLong = "Innovation 5 short description";
             innovation5.NumberOfLikes = 2000;
@@ -131,7 +131,7 @@ namespace SparkwareFinal.Fragments
                 LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(350, LayoutParams.MatchParent);
                 imageParams.SetMargins(0, 0, 0, 25);
                 innovationImageView.LayoutParameters = imageParams;
-                innovationImageView.SetBackgroundResource(Resource.Drawable.VoiceGuidedDeposits);
+                innovationImageView.SetBackgroundResource(innovations[i].Id);//Resource.Drawable.VoiceGuidedDeposits);
                 innovationImageView.Visibility = ViewStates.Visible;
 
                 containers[i].AddView(innovationImageView);

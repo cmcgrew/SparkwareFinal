@@ -18,7 +18,7 @@ namespace SparkwareFinal
         public string Title { get; set; }
         public string DescriptionLong { get; set; }
         public string DescriptionShort { get; set; }
-        public string Picture { get; set; }
+        public int ImageId { get; set; }
         public int NumberOfLikes { get; set; }
         public DateTime CreationDate { get; set; }
         //public List<string> Comments { get; set; }
