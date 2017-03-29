@@ -52,6 +52,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtEnterFeedback" />
+  <TextView
+    android:id ="@+id/txtEnterEmail"
+    android:text="Enter your E-mail address."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+  <EditText
+        android:inputType="textWebEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EdtEnterEmail" />
   <Button
         android:text="Submit Feedback"
         android:layout_width="match_parent"
