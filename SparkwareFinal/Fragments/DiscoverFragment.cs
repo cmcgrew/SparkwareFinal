@@ -93,6 +93,15 @@ namespace SparkwareFinal.Fragments
 
             innovations.Add(innovation5);
 
+            DisplayInnovations(view);
+
+            return view;
+        }
+
+        private void DisplayInnovations(View view)
+        {
+            containers = new List<LinearLayout>();
+
             parent = view.FindViewById<LinearLayout>(Resource.Id.discoverLinearLayout);
             scrollView = new ScrollView(this.Context);
             LinearLayout.LayoutParams scrollParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
@@ -104,14 +113,6 @@ namespace SparkwareFinal.Fragments
             tableLayout.LayoutParameters = tableParams;
             scrollView.AddView(tableLayout);
 
-            DisplayInnovations();
-
-            return view;
-        }
-
-        private void DisplayInnovations()
-        {
-            containers = new List<LinearLayout>();
             for (int i = 0; i < innovations.Count; i++)
             {
                 // Created LinearLayout (Container for image, and text) 
@@ -189,8 +190,6 @@ namespace SparkwareFinal.Fragments
                     //Continer click code goes here
                     Toast.MakeText(this.Context, "Title: " + innovations[j].Title.ToString(), ToastLength.Short).Show();
                 };
-
-
             }
         }
     }
