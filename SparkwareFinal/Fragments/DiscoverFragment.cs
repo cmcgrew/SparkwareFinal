@@ -85,7 +85,7 @@ namespace SparkwareFinal.Fragments
             innovation5.DescriptionLong = "Innovation 5 short description";
             innovation5.NumberOfLikes = 2000;
 
-            innovations.Add(innovation2);
+            innovations.Add(innovation5);
 
             parent = view.FindViewById<LinearLayout>(Resource.Id.discoverLinearLayout);
             scrollView = new ScrollView(this.Context);
@@ -103,7 +103,7 @@ namespace SparkwareFinal.Fragments
             return view;
         }
 
-        public void DisplayInnovations()
+        private void DisplayInnovations()
         {
             for (int i = 0; i < innovations.Count; i++)
             {
