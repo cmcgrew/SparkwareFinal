@@ -82,7 +82,7 @@ namespace SparkwareFinal.Fragments
                 LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(350, LayoutParams.MatchParent);
                 imageParams.SetMargins(0, 0, 0, 25);
                 innovationImageView.LayoutParameters = imageParams;
-                innovationImageView.SetBackgroundResource(innovations[i].Id);//Resource.Drawable.VoiceGuidedDeposits);
+                innovationImageView.SetBackgroundResource(innovations[i].ImageId);//Resource.Drawable.VoiceGuidedDeposits);
                 innovationImageView.Visibility = ViewStates.Visible;
 
                 containers[i].AddView(innovationImageView);
@@ -202,5 +202,11 @@ namespace SparkwareFinal.Fragments
 
             innovations.Add(innovation5);
         }
+
+        //public static string SelectedInnovationDisplayDescription(Innovation selectedInnovation)
+        //{
+
+        //    return "";
+        //}
     }
 }
