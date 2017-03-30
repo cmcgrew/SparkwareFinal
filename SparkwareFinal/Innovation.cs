@@ -15,6 +15,7 @@ namespace SparkwareFinal
     class Innovation
     {
         public int Id { get; set; }
+        public string Contributor { get; set; }
         public string Title { get; set; }
         public string DescriptionLong { get; set; }
         public string DescriptionShort { get; set; }

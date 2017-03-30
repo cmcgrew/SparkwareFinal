@@ -29,6 +29,7 @@ namespace SparkwareFinal.Fragments
         Innovation innovation3;
         Innovation innovation4;
         Innovation innovation5;
+        Innovation selectedInnovaiton;
 
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -42,56 +43,7 @@ namespace SparkwareFinal.Fragments
         {
             View view = inflater.Inflate(Resource.Layout.discover_page, container, false);
 
-            innovations = new List<Innovation>();
-            innovation1 = new Innovation();
-
-            innovation1.Title = "Voice Guided Deposits";
-            innovation1.Id = (int)typeof(Resource.Drawable).GetField("VoiceGuidedDeposits").GetValue(null);
-            innovation1.DescriptionShort = "Deposit a check through the USAA Mobile App using voice commands.";
-            innovation1.DescriptionLong = "Depositing a check through the USAA Mobile App shouldn't be a complicated task, but for our visually impaired members it was nearly impossible. Now, voice commands guide members through the process, telling them to \"push out,\" \"pull in\" or \"move right\" to capture a check's image and deposit it into their account.";
-            innovation1.NumberOfLikes = 2000;
-
-            innovations.Add(innovation1);
-
-            innovation2 = new Innovation();
-
-            innovation2.Title = "This is innovation 2";
-            innovation2.Id = (int)typeof(Resource.Drawable).GetField("globe").GetValue(null);
-            innovation2.DescriptionShort = "Innovation 2 short description";
-            innovation2.DescriptionLong = "Innovation 2 short description";
-            innovation2.NumberOfLikes = 2000;
-
-            innovations.Add(innovation2);
-
-            innovation3 = new Innovation();
-
-            innovation3.Title = "This is innovation 3";
-            innovation3.Id = (int)typeof(Resource.Drawable).GetField("idea").GetValue(null);
-            innovation3.DescriptionShort = "Innovation 3 short description";
-            innovation3.DescriptionLong = "Innovation 3 short description";
-            innovation3.NumberOfLikes = 2000;
-
-            innovations.Add(innovation3);
-
-            innovation4 = new Innovation();
-
-            innovation4.Title = "This is innovation 4";
-            innovation4.Id = (int)typeof(Resource.Drawable).GetField("Icon").GetValue(null);
-            innovation4.DescriptionShort = "Innovation 4 short description";
-            innovation4.DescriptionLong = "Innovation 4 short description";
-            innovation4.NumberOfLikes = 2000;
-
-            innovations.Add(innovation4);
-
-            innovation5 = new Innovation();
-
-            innovation5.Title = "This is innovation 5";
-            innovation5.Id = (int)typeof(Resource.Drawable).GetField("home").GetValue(null);
-            innovation5.DescriptionShort = "Innovation 5 short description";
-            innovation5.DescriptionLong = "Innovation 5 short description";
-            innovation5.NumberOfLikes = 2000;
-
-            innovations.Add(innovation5);
+            InstantiateVariables();
 
             DisplayInnovations(view);
 
@@ -131,7 +83,7 @@ namespace SparkwareFinal.Fragments
                 LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(350, LayoutParams.MatchParent);
                 imageParams.SetMargins(0, 0, 0, 25);
                 innovationImageView.LayoutParameters = imageParams;
-                innovationImageView.SetBackgroundResource(innovations[i].Id);//Resource.Drawable.VoiceGuidedDeposits);
+                innovationImageView.SetBackgroundResource(innovations[i].ImageId);//Resource.Drawable.VoiceGuidedDeposits);
                 innovationImageView.Visibility = ViewStates.Visible;
 
                 containers[i].AddView(innovationImageView);
@@ -161,15 +113,15 @@ namespace SparkwareFinal.Fragments
 
                 innovationTextContainer.AddView(innovationDescriptionTextView);
 
-                TextView innovationLikesTitleTextView = new TextView(this.Context);
-                innovationLikesTitleTextView.SetTextColor(Color.Black);
-                LinearLayout.LayoutParams likesTitleParams = new LinearLayout.LayoutParams(350, 350);
-                likesTitleParams.Gravity = GravityFlags.Bottom;
-                innovationLikesTitleTextView.LayoutParameters = likesTitleParams;
-                innovationLikesTitleTextView.Text = "Likes";
-                innovationLikesTitleTextView.SetTextSize(ComplexUnitType.Sp, 15.0f);
+                TextView innovationContributorTextView = new TextView(this.Context);
+                innovationContributorTextView.SetTextColor(Color.Black);
+                LinearLayout.LayoutParams likesTitleParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
+                likesTitleParams.TopMargin = 30;
+                innovationContributorTextView.LayoutParameters = likesTitleParams;
+                innovationContributorTextView.Text = $"Contributor: {innovations[i].Contributor}";
+                innovationContributorTextView.SetTextSize(ComplexUnitType.Sp, 15.0f);
 
-                innovationTextContainer.AddView(innovationLikesTitleTextView);
+                innovationTextContainer.AddView(innovationContributorTextView);
 
                 //RatingBar ratingbar = new RatingBar(this.Context);
                 //ratingbar.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
@@ -188,9 +140,76 @@ namespace SparkwareFinal.Fragments
                 containers[j].Click += delegate
                 {
                     //Continer click code goes here
+
+                    selectedInnovaiton = innovations[i];
                     Toast.MakeText(this.Context, "Title: " + innovations[j].Title.ToString(), ToastLength.Short).Show();
                 };
             }
         }
+
+        private void InstantiateVariables()
+        {
+            innovations = new List<Innovation>();
+            innovation1 = new Innovation();
+
+            innovation1.Title = "Voice Guided Deposits";
+            innovation1.Contributor = "USAA";
+            innovation1.ImageId = (int)typeof(Resource.Drawable).GetField("VoiceGuidedDeposits").GetValue(null);
+            innovation1.DescriptionShort = "Deposit a check through the USAA Mobile App using voice commands.";
+            innovation1.DescriptionLong = "Depositing a check through the USAA Mobile App shouldn't be a complicated task, but for our visually impaired members it was nearly impossible. Now, voice commands guide members through the process, telling them to \"push out,\" \"pull in\" or \"move right\" to capture a check's image and deposit it into their account.";
+            innovation1.NumberOfLikes = 2000;
+
+            innovations.Add(innovation1);
+
+            innovation2 = new Innovation();
+
+            innovation2.Title = "This is innovation 2";
+            innovation2.Contributor = "Chris McGrew";
+            innovation2.ImageId = (int)typeof(Resource.Drawable).GetField("globe").GetValue(null);
+            innovation2.DescriptionShort = "Innovation 2 short description";
+            innovation2.DescriptionLong = "Innovation 2 short description";
+            innovation2.NumberOfLikes = 2000;
+
+            innovations.Add(innovation2);
+
+            innovation3 = new Innovation();
+
+            innovation3.Title = "This is innovation 3";
+            innovation3.Contributor = "Melvin Montenegro";
+            innovation3.ImageId = (int)typeof(Resource.Drawable).GetField("idea").GetValue(null);
+            innovation3.DescriptionShort = "Innovation 3 short description";
+            innovation3.DescriptionLong = "Innovation 3 short description";
+            innovation3.NumberOfLikes = 2000;
+
+            innovations.Add(innovation3);
+
+            innovation4 = new Innovation();
+
+            innovation4.Title = "This is innovation 4";
+            innovation4.Contributor = "Marete";
+            innovation4.ImageId = (int)typeof(Resource.Drawable).GetField("Icon").GetValue(null);
+            innovation4.DescriptionShort = "Innovation 4 short description";
+            innovation4.DescriptionLong = "Innovation 4 short description";
+            innovation4.NumberOfLikes = 2000;
+
+            innovations.Add(innovation4);
+
+            innovation5 = new Innovation();
+
+            innovation5.Title = "This is innovation 5";
+            innovation5.Contributor = "Abdul";
+            innovation5.ImageId = (int)typeof(Resource.Drawable).GetField("home").GetValue(null);
+            innovation5.DescriptionShort = "Innovation 5 short description";
+            innovation5.DescriptionLong = "Innovation 5 short description";
+            innovation5.NumberOfLikes = 2000;
+
+            innovations.Add(innovation5);
+        }
+
+        //public static string SelectedInnovationDisplayDescription(Innovation selectedInnovation)
+        //{
+
+        //    return "";
+        //}
     }
 }
