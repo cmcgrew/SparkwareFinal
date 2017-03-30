@@ -6,65 +6,65 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <TextView
-      android:text="Member Innovations"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/textView1"
-      android:textSize="25sp" />
-  <TextView
-    android:text="What is this innovation improving?"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/txtInnovationImproving"
-    android:textSize="25sp" />
-  <RadioGroup
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <RadioButton
-      android:id="@+id/InsuranceRadioButton"
-      android:text="Insurance."
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content" />
-    <RadioButton
-        android:id="@+id/InvestmentRadioButton"
-        android:text="Investment."
+        android:text="Member Innovations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="25sp" />
+    <TextView
+        android:text="What is this innovation improving?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtInnovationImproving"
+        android:textSize="25sp" />
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/InsuranceRadioButton"
+            android:text="Insurance."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/InvestmentRadioButton"
+            android:text="Investment."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/BankingRadioButton"
+            android:text="Banking."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/OtherRadioButton"
+            android:text="Other."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/txtInnovationDescription"
+        android:text="Describe your idea in depth."
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <RadioButton
-        android:id="@+id/BankingRadioButton"
-        android:text="Banking."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <RadioButton
-        android:id="@+id/OtherRadioButton"
-        android:text="Other."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-  </RadioGroup>
-  <TextView
-    android:id ="@+id/txtInnovationDescription"
-    android:text="Describe your idea in depth."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-  <EditText
+    <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtEnterFeedback" />
-  <TextView
-    android:id ="@+id/txtEnterEmail"
-    android:text="Enter your E-mail address."
+    <TextView
+        android:id="@+id/txtEnterEmail"
+        android:text="Enter your E-mail address."
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-  <EditText
+        android:layout_height="wrap_content" />
+    <EditText
         android:inputType="textWebEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/EdtEnterEmail" />
-  <Button
+    <Button
         android:text="Submit Feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSubmitFeedback"/>
+        android:id="@+id/btnSubmitFeedback" />
 </LinearLayout>
