@@ -29,6 +29,7 @@ namespace SparkwareFinal.Fragments
         Innovation innovation3;
         Innovation innovation4;
         Innovation innovation5;
+        Innovation selectedInnovaiton;
 
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -139,6 +140,8 @@ namespace SparkwareFinal.Fragments
                 containers[j].Click += delegate
                 {
                     //Continer click code goes here
+
+                    selectedInnovaiton = innovations[i];
                     Toast.MakeText(this.Context, "Title: " + innovations[j].Title.ToString(), ToastLength.Short).Show();
                 };
             }
