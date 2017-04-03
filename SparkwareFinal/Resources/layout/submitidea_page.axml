@@ -42,28 +42,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RadioGroup>
-    <TextView
-        android:id="@+id/txtInnovationDescription"
-        android:text="Describe your idea in depth."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <EditText
+      <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtEnterFeedback" />
-    <TextView
-        android:id="@+id/txtEnterEmail"
-        android:text="Enter your E-mail address."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:id="@+id/txtEnterFeedback"
+  android:hint="Describe your idea in depth."/>   
     <EditText
         android:inputType="textWebEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/EdtEnterEmail" />
+        android:id="@+id/EdtEnterEmail"
+  android:hint="Enter your E-mail address."/>
     <Button
-        android:text="Submit Feedback"
+        android:text="Submit Idea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnSubmitFeedback" />
