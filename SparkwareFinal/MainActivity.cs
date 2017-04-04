@@ -8,12 +8,14 @@ using Android.Support.V4.App;
 using SparkwareFinal.Fragments;
 using SupportFragment = Android.Support.V4.App.Fragment;
 using System.Collections.Generic;
+using Plugin.Messaging;
+using System.Net;
 
 namespace SparkwareFinal
 {
     [Activity(Label = "SparkwareFinal", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : AppCompatActivity
-    {
+    {        
         //Variables for the different fragments(pages)
         private SupportFragment mCurrentFragment;
         private HomeFragment mHomeFragment;
@@ -63,7 +65,11 @@ namespace SparkwareFinal
 
             // Tracks the current fragment being shown, right now it is the home fragment
             mCurrentFragment = mHomeFragment;
+        }
 
+        private void BtnSubmitIdea_Click(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

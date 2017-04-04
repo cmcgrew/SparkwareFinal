@@ -2319,7 +2319,7 @@ namespace SparkwareFinal
 			public const int bottom = 2131165226;
 			
 			// aapt resource value: 0x7f0700a6
-			public const int btnSubmitFeedback = 2131165350;
+			public const int btnSubmitIdea = 2131165350;
 			
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;

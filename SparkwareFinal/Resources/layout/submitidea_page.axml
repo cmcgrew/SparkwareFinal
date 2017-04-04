@@ -58,5 +58,5 @@
         android:text="Submit Idea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSubmitFeedback" />
+        android:id="@+id/btnSubmitIdea" />
 </LinearLayout>
