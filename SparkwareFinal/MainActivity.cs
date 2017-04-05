@@ -13,7 +13,7 @@ using System.Net;
 
 namespace SparkwareFinal
 {
-    [Activity(Label = "SparkwareFinal", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "SparkwareFinal")]
     public class MainActivity : AppCompatActivity
     {        
         //Variables for the different fragments(pages)

@@ -121,6 +121,7 @@
     <Compile Include="Fragments\DiscoverFragment.cs" />
     <Compile Include="Fragments\HomeFragment.cs" />
     <Compile Include="Innovation.cs" />
+    <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -140,6 +141,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\myaccount_page.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\login_page.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

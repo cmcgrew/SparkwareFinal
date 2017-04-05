@@ -205,11 +205,5 @@ namespace SparkwareFinal.Fragments
 
             innovations.Add(innovation5);
         }
-
-        //public static string SelectedInnovationDisplayDescription(Innovation selectedInnovation)
-        //{
-
-        //    return "";
-        //}
     }
 }
