@@ -2237,29 +2237,29 @@ namespace SparkwareFinal
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0700a7
-			public const int BankingRadioButton = 2131165351;
+			// aapt resource value: 0x7f0700a6
+			public const int BankingRadioButton = 2131165350;
 			
-			// aapt resource value: 0x7f0700aa
-			public const int EdtEnterEmail = 2131165354;
+			// aapt resource value: 0x7f0700a9
+			public const int EdtEnterEmail = 2131165353;
+			
+			// aapt resource value: 0x7f0700a4
+			public const int InsuranceRadioButton = 2131165348;
 			
 			// aapt resource value: 0x7f0700a5
-			public const int InsuranceRadioButton = 2131165349;
+			public const int InvestmentRadioButton = 2131165349;
 			
-			// aapt resource value: 0x7f0700a6
-			public const int InvestmentRadioButton = 2131165350;
+			// aapt resource value: 0x7f0700a7
+			public const int OtherRadioButton = 2131165351;
 			
-			// aapt resource value: 0x7f0700a8
-			public const int OtherRadioButton = 2131165352;
+			// aapt resource value: 0x7f0700ad
+			public const int account = 2131165357;
 			
 			// aapt resource value: 0x7f0700ae
-			public const int account = 2131165358;
+			public const int achievements = 2131165358;
 			
-			// aapt resource value: 0x7f0700af
-			public const int achievements = 2131165359;
-			
-			// aapt resource value: 0x7f070097
-			public const int action0 = 2131165335;
+			// aapt resource value: 0x7f070096
+			public const int action0 = 2131165334;
 			
 			// aapt resource value: 0x7f07005a
 			public const int action_bar = 2131165274;
@@ -2285,8 +2285,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07005b
 			public const int action_context_bar = 2131165275;
 			
-			// aapt resource value: 0x7f07009b
-			public const int action_divider = 2131165339;
+			// aapt resource value: 0x7f07009a
+			public const int action_divider = 2131165338;
 			
 			// aapt resource value: 0x7f070003
 			public const int action_menu_divider = 2131165187;
@@ -2321,14 +2321,14 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07007a
 			public const int btnLogin = 2131165306;
 			
-			// aapt resource value: 0x7f0700ab
-			public const int btnSubmitIdea = 2131165355;
+			// aapt resource value: 0x7f0700aa
+			public const int btnSubmitIdea = 2131165354;
 			
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
 			
-			// aapt resource value: 0x7f070098
-			public const int cancel_action = 2131165336;
+			// aapt resource value: 0x7f070097
+			public const int cancel_action = 2131165335;
 			
 			// aapt resource value: 0x7f07002b
 			public const int center = 2131165227;
@@ -2342,8 +2342,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070052
 			public const int checkbox = 2131165266;
 			
-			// aapt resource value: 0x7f07009e
-			public const int chronometer = 2131165342;
+			// aapt resource value: 0x7f07009d
+			public const int chronometer = 2131165341;
 			
 			// aapt resource value: 0x7f070033
 			public const int clip_horizontal = 2131165235;
@@ -2369,20 +2369,20 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070040
 			public const int default_activity_button = 2131165248;
 			
-			// aapt resource value: 0x7f07006a
-			public const int design_bottom_sheet = 2131165290;
+			// aapt resource value: 0x7f07006b
+			public const int design_bottom_sheet = 2131165291;
+			
+			// aapt resource value: 0x7f070072
+			public const int design_menu_item_action_area = 2131165298;
 			
 			// aapt resource value: 0x7f070071
-			public const int design_menu_item_action_area = 2131165297;
+			public const int design_menu_item_action_area_stub = 2131165297;
 			
 			// aapt resource value: 0x7f070070
-			public const int design_menu_item_action_area_stub = 2131165296;
+			public const int design_menu_item_text = 2131165296;
 			
 			// aapt resource value: 0x7f07006f
-			public const int design_menu_item_text = 2131165295;
-			
-			// aapt resource value: 0x7f07006e
-			public const int design_navigation_view = 2131165294;
+			public const int design_navigation_view = 2131165295;
 			
 			// aapt resource value: 0x7f070076
 			public const int dialogLayout = 2131165302;
@@ -2390,11 +2390,11 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07000e
 			public const int disableHome = 2131165198;
 			
-			// aapt resource value: 0x7f0700ac
-			public const int discover = 2131165356;
+			// aapt resource value: 0x7f0700ab
+			public const int discover = 2131165355;
 			
-			// aapt resource value: 0x7f070072
-			public const int discoverLinearLayout = 2131165298;
+			// aapt resource value: 0x7f070073
+			public const int discoverLinearLayout = 2131165299;
 			
 			// aapt resource value: 0x7f07005c
 			public const int edit_query = 2131165276;
@@ -2402,8 +2402,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07001c
 			public const int end = 2131165212;
 			
-			// aapt resource value: 0x7f0700a3
-			public const int end_padder = 2131165347;
+			// aapt resource value: 0x7f0700a2
+			public const int end_padder = 2131165346;
 			
 			// aapt resource value: 0x7f070023
 			public const int enterAlways = 2131165219;
@@ -2456,8 +2456,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07003f
 			public const int image = 2131165247;
 			
-			// aapt resource value: 0x7f0700a2
-			public const int info = 2131165346;
+			// aapt resource value: 0x7f0700a1
+			public const int info = 2131165345;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
@@ -2465,11 +2465,11 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07002f
 			public const int left = 2131165231;
 			
-			// aapt resource value: 0x7f07009c
-			public const int line1 = 2131165340;
+			// aapt resource value: 0x7f07009b
+			public const int line1 = 2131165339;
 			
-			// aapt resource value: 0x7f0700a0
-			public const int line3 = 2131165344;
+			// aapt resource value: 0x7f07009f
+			public const int line3 = 2131165343;
 			
 			// aapt resource value: 0x7f07000b
 			public const int listMode = 2131165195;
@@ -2477,11 +2477,11 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070041
 			public const int list_item = 2131165249;
 			
-			// aapt resource value: 0x7f0700b0
-			public const int logout = 2131165360;
+			// aapt resource value: 0x7f0700af
+			public const int logout = 2131165359;
 			
-			// aapt resource value: 0x7f07009a
-			public const int media_actions = 2131165338;
+			// aapt resource value: 0x7f070099
+			public const int media_actions = 2131165337;
 			
 			// aapt resource value: 0x7f07001d
 			public const int middle = 2131165213;
@@ -2564,8 +2564,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070016
 			public const int multiply = 2131165206;
 			
-			// aapt resource value: 0x7f07006d
-			public const int navigation_header_container = 2131165293;
+			// aapt resource value: 0x7f07006e
+			public const int navigation_header_container = 2131165294;
 			
 			// aapt resource value: 0x7f070021
 			public const int never = 2131165217;
@@ -2660,11 +2660,11 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070013
 			public const int showTitle = 2131165203;
 			
-			// aapt resource value: 0x7f07006c
-			public const int snackbar_action = 2131165292;
+			// aapt resource value: 0x7f07006d
+			public const int snackbar_action = 2131165293;
 			
-			// aapt resource value: 0x7f07006b
-			public const int snackbar_text = 2131165291;
+			// aapt resource value: 0x7f07006c
+			public const int snackbar_text = 2131165292;
 			
 			// aapt resource value: 0x7f070027
 			public const int snap = 2131165223;
@@ -2687,32 +2687,32 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070031
 			public const int start = 2131165233;
 			
-			// aapt resource value: 0x7f070099
-			public const int status_bar_latest_event_content = 2131165337;
+			// aapt resource value: 0x7f070098
+			public const int status_bar_latest_event_content = 2131165336;
 			
 			// aapt resource value: 0x7f070065
 			public const int submit_area = 2131165285;
 			
-			// aapt resource value: 0x7f0700ad
-			public const int submitidea = 2131165357;
+			// aapt resource value: 0x7f0700ac
+			public const int submitidea = 2131165356;
 			
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
-			// aapt resource value: 0x7f0700a1
-			public const int text = 2131165345;
+			// aapt resource value: 0x7f0700a0
+			public const int text = 2131165344;
 			
-			// aapt resource value: 0x7f07009f
-			public const int text2 = 2131165343;
+			// aapt resource value: 0x7f07009e
+			public const int text2 = 2131165342;
 			
 			// aapt resource value: 0x7f07004d
 			public const int textSpacerNoButtons = 2131165261;
 			
-			// aapt resource value: 0x7f070096
-			public const int textView1 = 2131165334;
+			// aapt resource value: 0x7f070069
+			public const int textView1 = 2131165289;
 			
-			// aapt resource value: 0x7f07009d
-			public const int time = 2131165341;
+			// aapt resource value: 0x7f07009c
+			public const int time = 2131165340;
 			
 			// aapt resource value: 0x7f070043
 			public const int title = 2131165251;
@@ -2729,8 +2729,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070047
 			public const int topPanel = 2131165255;
 			
-			// aapt resource value: 0x7f070069
-			public const int touch_outside = 2131165289;
+			// aapt resource value: 0x7f07006a
+			public const int touch_outside = 2131165290;
 			
 			// aapt resource value: 0x7f070075
 			public const int tvHomeDescription = 2131165301;
@@ -2741,14 +2741,11 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070077
 			public const int tvLoginTitle = 2131165303;
 			
-			// aapt resource value: 0x7f070073
-			public const int tvTest = 2131165299;
+			// aapt resource value: 0x7f0700a8
+			public const int txtEnterFeedback = 2131165352;
 			
-			// aapt resource value: 0x7f0700a9
-			public const int txtEnterFeedback = 2131165353;
-			
-			// aapt resource value: 0x7f0700a4
-			public const int txtInnovationImproving = 2131165348;
+			// aapt resource value: 0x7f0700a3
+			public const int txtInnovationImproving = 2131165347;
 			
 			// aapt resource value: 0x7f070009
 			public const int up = 2131165193;
@@ -2919,115 +2916,118 @@ namespace SparkwareFinal
 			public const int abc_select_dialog_material = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int design_bottom_sheet_dialog = 2130903065;
+			public const int achievement_page = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int design_layout_snackbar = 2130903066;
+			public const int design_bottom_sheet_dialog = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int design_layout_snackbar_include = 2130903067;
+			public const int design_layout_snackbar = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int design_layout_tab_icon = 2130903068;
+			public const int design_layout_snackbar_include = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int design_layout_tab_text = 2130903069;
+			public const int design_layout_tab_icon = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int design_menu_item_action_area = 2130903070;
+			public const int design_layout_tab_text = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int design_navigation_item = 2130903071;
+			public const int design_menu_item_action_area = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int design_navigation_item_header = 2130903072;
+			public const int design_navigation_item = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int design_navigation_item_separator = 2130903073;
+			public const int design_navigation_item_header = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int design_navigation_item_subheader = 2130903074;
+			public const int design_navigation_item_separator = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int design_navigation_menu = 2130903075;
+			public const int design_navigation_item_subheader = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int design_navigation_menu_item = 2130903076;
+			public const int design_navigation_menu = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int discover_page = 2130903077;
+			public const int design_navigation_menu_item = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int home_page = 2130903078;
+			public const int discover_page = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int login_page = 2130903079;
+			public const int home_page = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int Main = 2130903080;
+			public const int login_page = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int mr_chooser_dialog = 2130903081;
+			public const int Main = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int mr_chooser_list_item = 2130903082;
+			public const int mr_chooser_dialog = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int mr_controller_material_dialog_b = 2130903083;
+			public const int mr_chooser_list_item = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int mr_controller_volume_item = 2130903084;
+			public const int mr_controller_material_dialog_b = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int mr_playback_control = 2130903085;
+			public const int mr_controller_volume_item = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int mr_volume_control = 2130903086;
+			public const int mr_playback_control = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int myaccount_page = 2130903087;
+			public const int mr_volume_control = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int notification_media_action = 2130903088;
+			public const int myaccount_page = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int notification_media_cancel_action = 2130903089;
+			public const int notification_media_action = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int notification_template_big_media = 2130903090;
+			public const int notification_media_cancel_action = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int notification_template_big_media_narrow = 2130903091;
+			public const int notification_template_big_media = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int notification_template_lines = 2130903092;
+			public const int notification_template_big_media_narrow = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int notification_template_media = 2130903093;
+			public const int notification_template_lines = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int notification_template_part_chronometer = 2130903094;
+			public const int notification_template_media = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int notification_template_part_time = 2130903095;
+			public const int notification_template_part_chronometer = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int select_dialog_item_material = 2130903096;
+			public const int notification_template_part_time = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int select_dialog_multichoice_material = 2130903097;
+			public const int select_dialog_item_material = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int select_dialog_singlechoice_material = 2130903098;
+			public const int select_dialog_multichoice_material = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int submitidea_page = 2130903099;
+			public const int select_dialog_singlechoice_material = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int support_simple_spinner_dropdown_item = 2130903100;
+			public const int submitidea_page = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int toolbar = 2130903101;
+			public const int support_simple_spinner_dropdown_item = 2130903101;
+			
+			// aapt resource value: 0x7f03003e
+			public const int toolbar = 2130903102;
 			
 			static Layout()
 			{
