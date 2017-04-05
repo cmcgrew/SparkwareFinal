@@ -15,13 +15,19 @@ namespace SparkwareFinal
     [Activity(Label = "SparkwareFinal", MainLauncher = true, Icon = "@drawable/icon")]
     public class LoginActivity : Activity
     {
+        Button btnLogin;
+        EditText etUsername;
+        EditText etPassword;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.login_page);
 
-            Button btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
+            btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
+            etUsername = FindViewById<EditText>(Resource.Id.etUsername);
+            etPassword = FindViewById<EditText>(Resource.Id.etPassword);
 
             btnLogin.Click += BtnLogin_Click;
 
@@ -30,7 +36,21 @@ namespace SparkwareFinal
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MainActivity));
+            if (etUsername.Text == "sparkware")
+            {
+                if(etPassword.Text == "password")
+                {
+                    StartActivity(typeof(MainActivity));
+                }
+                else
+                {
+                    Toast.MakeText(ApplicationContext, "Invalid Username", ToastLength.Long).Show();
+                }
+            }
+            else
+            {
+                Toast.MakeText(ApplicationContext, "Invalid Username", ToastLength.Long).Show();
+            }
         }
     }
 }

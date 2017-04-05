@@ -2411,6 +2411,12 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070024
 			public const int enterAlwaysCollapsed = 2131165220;
 			
+			// aapt resource value: 0x7f070079
+			public const int etPassword = 2131165305;
+			
+			// aapt resource value: 0x7f070078
+			public const int etUsername = 2131165304;
+			
 			// aapt resource value: 0x7f070025
 			public const int exitUntilCollapsed = 2131165221;
 			
@@ -2575,9 +2581,6 @@ namespace SparkwareFinal
 			
 			// aapt resource value: 0x7f070046
 			public const int parentPanel = 2131165254;
-			
-			// aapt resource value: 0x7f070079
-			public const int password = 2131165305;
 			
 			// aapt resource value: 0x7f070029
 			public const int pin = 2131165225;
@@ -2752,9 +2755,6 @@ namespace SparkwareFinal
 			
 			// aapt resource value: 0x7f070014
 			public const int useLogo = 2131165204;
-			
-			// aapt resource value: 0x7f070078
-			public const int userName = 2131165304;
 			
 			// aapt resource value: 0x7f07000a
 			public const int view_offset_helper = 2131165194;

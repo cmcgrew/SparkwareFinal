@@ -20,7 +20,7 @@
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/userName"
+            android:id="@+id/etUsername"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:hint="Username"
@@ -33,7 +33,7 @@
             android:inputType="textPassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/password"
+            android:id="@+id/etPassword"
             android:hint="Password"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/black"
