@@ -26,6 +26,7 @@ namespace SparkwareFinal.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.myaccount_page, container, false);
+
             return view;
         }
     }

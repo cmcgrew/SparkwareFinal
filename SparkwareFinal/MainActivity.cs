@@ -20,6 +20,9 @@ namespace SparkwareFinal
         private DiscoverFragment mDiscoverFragment;
         private SubmitIdeaFragment mSubmitIdeaFragment;
         private MyAccountFragment mMyAccountFragment;
+        private User user1 = new User("Joe", "123");
+        private User user2 = new User("Abdul", "345");
+        private User user3 = new User("Sarah", "678");
 
         //This keeps track of the "stack" of pages so that the back button works correctly... bugs out if not used
         private Stack<SupportFragment> mStackFragment;
@@ -33,7 +36,6 @@ namespace SparkwareFinal
             mDiscoverFragment = new DiscoverFragment();
             mSubmitIdeaFragment = new SubmitIdeaFragment();
             mMyAccountFragment = new MyAccountFragment();
-
             mStackFragment = new Stack<SupportFragment>();  
 
             // Set our view from the "main" layout resource
