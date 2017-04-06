@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="324dp"
+        android:layout_height="300dp"
+        android:id="@+id/dialogLayout"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:text="SPARKWARE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:gravity="center"
+            android:id="@+id/tvLoginTitle"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etUsername"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Username"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:layout_marginTop="50dp"
+            android:textSize="16dp"
+            android:inputType="text" />
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPassword"
+            android:hint="Password"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp" />
+        <Button
+            android:text="Log In"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/btnLogin"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#FFF"
+            android:background="#000059"
+            android:layout_marginBottom="12dp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -35,8 +35,6 @@ namespace SparkwareFinal.Fragments
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -140,9 +138,11 @@ namespace SparkwareFinal.Fragments
                 containers[j].Click += delegate
                 {
                     //Continer click code goes here
-
-                    selectedInnovaiton = innovations[i];
-                    Toast.MakeText(this.Context, "Title: " + innovations[j].Title.ToString(), ToastLength.Short).Show();
+                    Toast.MakeText(this.Context, "Title: " + innovations[j].Title, ToastLength.Short).Show();
+                    selectedInnovaiton = innovations[j];
+                    //var activity2 = new Intent(this, typeof(EnrollActivity));
+                    //activity2.PutExtra("MyData", "Data from Activity1");
+                    //StartActivity(activity2);
                 };
             }
         }
@@ -205,11 +205,5 @@ namespace SparkwareFinal.Fragments
 
             innovations.Add(innovation5);
         }
-
-        //public static string SelectedInnovationDisplayDescription(Innovation selectedInnovation)
-        //{
-
-        //    return "";
-        //}
     }
 }
