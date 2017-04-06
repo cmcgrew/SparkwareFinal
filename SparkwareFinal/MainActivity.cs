@@ -104,8 +104,10 @@ namespace SparkwareFinal
                 case Resource.Id.achievements:
                     ShowFragment(mAchievementFragment);
                     return true;
-                //case Resource.Id.logout:
-                //    return true;
+                case Resource.Id.logout:
+                    StartActivity(typeof(LoginActivity));
+                    this.Finish();
+                    return true;
                 default:
                     return base.OnOptionsItemSelected(item);
             }
