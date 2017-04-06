@@ -5,21 +5,40 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <TextView
-        android:text="USAA LABS"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textColor="#000"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:id="@+id/tvHomeTitle" />
-    <TextView
-        android:text="USAA Labs provides members the opportunity to engage and provide feedback on new innovations, concepts and exclusive pilots. USAA Labs puts you, the innovator, at the forefront of innovation by providing a vibrant community where members can innovate for members."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#000"
-        android:gravity="center"
-        android:id="@+id/tvHomeDescription" />
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+          android:text="USAA LABS"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="50sp"
+          android:textColor="#000"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:id="@+id/tvHomeTitle" />
+      <TextView
+          android:text="USAA Labs provides members the opportunity to engage and provide feedback on new innovations, concepts and exclusive pilots. USAA Labs puts you, the innovator, at the forefront of innovation by providing a vibrant community where members can innovate for members."
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="20sp"
+          android:textColor="#000"
+          android:gravity="center"
+          android:id="@+id/tvHomeDescription" />
+      <TextView
+            android:text="Enrollments:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="7dp"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:id="@+id/tvHomeDescription" />
+    </TableLayout>
+  </ScrollView>
 </LinearLayout>
