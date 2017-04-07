@@ -20,7 +20,10 @@ namespace SparkwareFinal.Fragments
     public class DiscoverFragment : Android.Support.V4.App.Fragment
     {
         List<Innovation> innovations;
-        List<LinearLayout> containers;// = new List<LinearLayout>();
+        List<LinearLayout> containers;
+        List<TextView> likeButton;
+        bool[] likeButtonList;
+        //bool likeClicked;
         TableLayout tableLayout;
         LinearLayout parent;
         ScrollView scrollView;
@@ -51,6 +54,9 @@ namespace SparkwareFinal.Fragments
         private void DisplayInnovations(View view)
         {
             containers = new List<LinearLayout>();
+            likeButton = new List<TextView>();
+            likeButtonList = new bool[innovations.Count];
+
 
             parent = view.FindViewById<LinearLayout>(Resource.Id.discoverLinearLayout);
             scrollView = new ScrollView(this.Context);
@@ -65,6 +71,7 @@ namespace SparkwareFinal.Fragments
 
             for (int i = 0; i < innovations.Count; i++)
             {
+                likeButtonList[i] = false;
                 // Created LinearLayout (Container for image, and text) 
                 LinearLayout innovationContainer = new LinearLayout(this.Context);
                 containers.Add(innovationContainer);
@@ -113,13 +120,24 @@ namespace SparkwareFinal.Fragments
 
                 TextView innovationContributorTextView = new TextView(this.Context);
                 innovationContributorTextView.SetTextColor(Color.Black);
-                LinearLayout.LayoutParams likesTitleParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
-                likesTitleParams.TopMargin = 30;
-                innovationContributorTextView.LayoutParameters = likesTitleParams;
+                LinearLayout.LayoutParams innovationContributorParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.WrapContent);
+                innovationContributorParams.TopMargin = 30;
+                innovationContributorTextView.LayoutParameters = innovationContributorParams;
                 innovationContributorTextView.Text = $"Contributor: {innovations[i].Contributor}";
                 innovationContributorTextView.SetTextSize(ComplexUnitType.Sp, 15.0f);
 
                 innovationTextContainer.AddView(innovationContributorTextView);
+
+                TextView likesTextView = new TextView(this.Context);
+                innovationContributorTextView.SetTextColor(Color.Black);
+                LinearLayout.LayoutParams likesParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.WrapContent);
+                likesParams.TopMargin = 80;
+                likesTextView.LayoutParameters = likesParams;
+                likesTextView.Text = $"Likes: {innovations[i].NumberOfLikes.ToString()}";
+                likesTextView.SetTextSize(ComplexUnitType.Sp, 15.0f);
+                likeButton.Add(likesTextView);
+
+                innovationTextContainer.AddView(likesTextView);
 
                 //RatingBar ratingbar = new RatingBar(this.Context);
                 //ratingbar.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
@@ -143,6 +161,22 @@ namespace SparkwareFinal.Fragments
                     //var activity2 = new Intent(this, typeof(EnrollActivity));
                     //activity2.PutExtra("MyData", "Data from Activity1");
                     //StartActivity(activity2);
+                };
+
+                likeButton[j].Click += delegate
+                {
+                    if (likeButtonList[j] == false)
+                    {
+                        innovations[j].NumberOfLikes++;
+                        likeButtonList[j] = true;
+                        likeButton[j].Text = $"Likes: {innovations[j].NumberOfLikes.ToString()}";
+                    }
+                    else
+                    {
+                        innovations[j].NumberOfLikes--;
+                        likeButtonList[j] = false;
+                        likeButton[j].Text = $"Likes: {innovations[j].NumberOfLikes.ToString()}";
+                    }
                 };
             }
         }
@@ -179,7 +213,7 @@ namespace SparkwareFinal.Fragments
             innovation3.ImageId = (int)typeof(Resource.Drawable).GetField("idea").GetValue(null);
             innovation3.DescriptionShort = "Innovation 3 short description";
             innovation3.DescriptionLong = "Innovation 3 short description";
-            innovation3.NumberOfLikes = 2000;
+            innovation3.NumberOfLikes = 1000;
 
             innovations.Add(innovation3);
 
@@ -190,7 +224,7 @@ namespace SparkwareFinal.Fragments
             innovation4.ImageId = (int)typeof(Resource.Drawable).GetField("Icon").GetValue(null);
             innovation4.DescriptionShort = "Innovation 4 short description";
             innovation4.DescriptionLong = "Innovation 4 short description";
-            innovation4.NumberOfLikes = 2000;
+            innovation4.NumberOfLikes = 1000;
 
             innovations.Add(innovation4);
 
