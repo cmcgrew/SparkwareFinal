@@ -91,18 +91,23 @@ namespace SparkwareFinal
             {
                 case Resource.Id.home:
                     ShowFragment(mHomeFragment);
+                    SupportActionBar.Title = "Sparkware";
                     return true;
                 case Resource.Id.discover:
                     ShowFragment(mDiscoverFragment);
+                    SupportActionBar.Title = "Discover";
                     return true;
                 case Resource.Id.submitidea:
                     ShowFragment(mSubmitIdeaFragment);
+                    SupportActionBar.Title = "Submit Idea";
                     return true;
                 case Resource.Id.account:
                     ShowFragment(mMyAccountFragment);
+                    SupportActionBar.Title = "My Account";
                     return true;
                 case Resource.Id.achievements:
                     ShowFragment(mAchievementFragment);
+                    SupportActionBar.Title = "Achievements";
                     return true;
                 case Resource.Id.logout:
                     StartActivity(typeof(LoginActivity));

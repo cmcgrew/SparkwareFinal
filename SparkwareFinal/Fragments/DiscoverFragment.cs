@@ -44,9 +44,18 @@ namespace SparkwareFinal.Fragments
         {
             View view = inflater.Inflate(Resource.Layout.discover_page, container, false);
 
+            
+
             InstantiateVariables();
 
+            //For DropDown list https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/
+
             DisplayInnovations(view);
+
+
+
+
+
 
             return view;
         }
@@ -68,6 +77,8 @@ namespace SparkwareFinal.Fragments
             LinearLayout.LayoutParams tableParams = new LinearLayout.LayoutParams(LayoutParams.MatchParent, LayoutParams.MatchParent);
             tableLayout.LayoutParameters = tableParams;
             scrollView.AddView(tableLayout);
+
+            tableLayout.RemoveAllViews();
 
             for (int i = 0; i < innovations.Count; i++)
             {
@@ -234,10 +245,24 @@ namespace SparkwareFinal.Fragments
             innovation5.Contributor = "Abdul";
             innovation5.ImageId = (int)typeof(Resource.Drawable).GetField("home").GetValue(null);
             innovation5.DescriptionShort = "Innovation 5 short description";
-            innovation5.DescriptionLong = "Innovation 5 short description";
+            innovation5.DescriptionLong = "Innovation 5 long description";
             innovation5.NumberOfLikes = 2000;
 
             innovations.Add(innovation5);
+        }
+
+        private void FilterResults()
+        {
+
+            var query = from c in innovations
+                        orderby c.NumberOfLikes descending
+                        select c;
+
+            List<Innovation> filteredList = new List<Innovation>();
+            filteredList = query.ToList<Innovation>();
+
+            // Clear List
+            //filteredList.Clear();
         }
     }
 }
