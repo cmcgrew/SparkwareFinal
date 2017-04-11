@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Achievement.cs" />
+    <Compile Include="DiscoverListViewAdapter.cs" />
     <Compile Include="Fragments\AchievementFragment.cs" />
     <Compile Include="Fragments\MyAccountFragment.cs" />
     <Compile Include="Fragments\SubmitIdeaFragment.cs" />
@@ -150,6 +151,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\achievement_page.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\discover_row.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -4,6 +4,7 @@ using Android.Views;
 using Android.Widget;
 using Plugin.Messaging;// Add this and the one below to your processor directives
 using System.Net;
+using Android.App;
 
 namespace SparkwareFinal.Fragments
 {
@@ -32,19 +33,18 @@ namespace SparkwareFinal.Fragments
         //Need to know if we can send emails
         private void SubmitIdeaButon_Click(object sender, EventArgs e)
         {
-            // ImageView badge1 = new ImageView(Activity);
-            //badge1  
-            //AlertDialog.Builder alert = new AlertDialog.Builder(Activity);
-            //AlertDialog myAlert = alert.Create();
-            //myAlert.SetTitle("Badge Earned!");
-            //myAlert.SetMessage("First feedback badge earned!");
-            //myAlert.SetIcon(Resource.Drawable.badge1);
-            //myAlert.SetButton("Awesome!", (s, ev) =>
-            //{
-            //    Toast.MakeText(Activity, "Badge Earned!", ToastLength.Long).Show();
-            //});
+            ImageView badge1 = new ImageView(Activity);
+            AlertDialog.Builder alert = new AlertDialog.Builder(Activity);
+            AlertDialog myAlert = alert.Create();
+            myAlert.SetTitle("Badge Earned!");
+            myAlert.SetMessage("First feedback badge earned!");
+            myAlert.SetIcon(Resource.Drawable.badge1);
+            myAlert.SetButton("Awesome!", (s, ev) =>
+            {
+                Toast.MakeText(Activity, "Badge Earned!", ToastLength.Long).Show();
+            });
 
-            //myAlert.Show();            
+            myAlert.Show();
             SendEmail();
         }
 

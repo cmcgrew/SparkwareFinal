@@ -36,21 +36,21 @@ namespace SparkwareFinal
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //if (etUsername.Text == "sparkware")
-            //{
-            //    if(etPassword.Text == "password")
-            //    {
+            if (etUsername.Text == "sparkware")
+            {
+                if (etPassword.Text == "password")
+                {
                     StartActivity(typeof(MainActivity));
-            //    }
-            //    else
-            //    {
-            //        Toast.MakeText(ApplicationContext, "Invalid Username", ToastLength.Long).Show();
-            //    }
-            //}
-            //else
-            //{
-            //    Toast.MakeText(ApplicationContext, "Invalid Username", ToastLength.Long).Show();
-            //}
+                }
+                else
+                {
+                    Toast.MakeText(ApplicationContext, "Invalid Username", ToastLength.Long).Show();
+                }
+            }
+            else
+            {
+                Toast.MakeText(ApplicationContext, "Invalid Username", ToastLength.Long).Show();
+            }
         }
     }
 }

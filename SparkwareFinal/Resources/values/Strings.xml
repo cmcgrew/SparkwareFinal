@@ -2,4 +2,10 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">SparkwareFinal</string>
+
+  <string-array name="DiscoverFilter">
+    <item>Most Popular</item>
+    <item>Newest</item>
+    <item>Oldest</item>
+  </string-array>
 </resources>
