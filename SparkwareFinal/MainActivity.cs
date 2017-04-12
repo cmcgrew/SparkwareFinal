@@ -23,6 +23,7 @@ namespace SparkwareFinal
         private SubmitIdeaFragment mSubmitIdeaFragment;
         private MyAccountFragment mMyAccountFragment;
         private AchievementFragment mAchievementFragment;
+        private PatentTreeFragment mPatentTreeFragment;
 
         //This keeps track of the "stack" of pages so that the back button works correctly... bugs out if not used
         private Stack<SupportFragment> mStackFragment;
@@ -37,6 +38,7 @@ namespace SparkwareFinal
             mSubmitIdeaFragment = new SubmitIdeaFragment();
             mMyAccountFragment = new MyAccountFragment();
             mAchievementFragment = new AchievementFragment();
+            mPatentTreeFragment = new PatentTreeFragment();
 
             mStackFragment = new Stack<SupportFragment>();  
 
@@ -51,6 +53,9 @@ namespace SparkwareFinal
             var trans = SupportFragmentManager.BeginTransaction();
 
             // Add fragment to the tranaction and hide it (only 1 is needed to be shown at a time, the last one)
+            trans.Add(Resource.Id.fragmentContainer, mPatentTreeFragment, "PatentTreeFragment");
+            trans.Hide(mPatentTreeFragment);
+
             trans.Add(Resource.Id.fragmentContainer, mAchievementFragment, "AchievementFragment");
             trans.Hide(mAchievementFragment);
 
@@ -108,6 +113,10 @@ namespace SparkwareFinal
                 case Resource.Id.achievements:
                     ShowFragment(mAchievementFragment);
                     SupportActionBar.Title = "Achievements";
+                    return true;
+                case Resource.Id.patentTree:
+                    ShowFragment(mPatentTreeFragment);
+                    SupportActionBar.Title = "Patent Tree";
                     return true;
                 case Resource.Id.logout:
                     StartActivity(typeof(LoginActivity));

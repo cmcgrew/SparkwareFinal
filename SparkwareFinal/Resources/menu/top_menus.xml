@@ -29,6 +29,10 @@
        app:showAsAction="never"
        android:title="Achievements" />
   <item
+       android:id="@+id/patentTree"
+       app:showAsAction="never"
+       android:title="Member Patent Tree" />
+  <item
        android:id="@+id/logout"
        app:showAsAction="never"
        android:title="Log Out" />

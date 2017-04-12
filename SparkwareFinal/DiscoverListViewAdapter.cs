@@ -18,6 +18,7 @@ namespace SparkwareFinal
     {
         private List<Innovation> mInnovations;
         private Context mContext;
+        private bool likeButtonClicked;
 
         public DiscoverListViewAdapter(Activity context, List<Innovation> innovations)
         {
@@ -67,8 +68,27 @@ namespace SparkwareFinal
             AppCompatTextView innovationContributor = row.FindViewById<AppCompatTextView>(Resource.Id.innovationContributor);
             innovationContributor.Text = "Contributor: " + mInnovations[position].Contributor;
 
+            AppCompatTextView innovationDate = row.FindViewById<AppCompatTextView>(Resource.Id.innovationDate);
+            innovationDate.Text = "Date: " + String.Format("{0:MMMM d, yyy}", mInnovations[position].CreationDate);
+
             AppCompatTextView innovationLikes = row.FindViewById<AppCompatTextView>(Resource.Id.innovationLikes);
             innovationLikes.Text = "Likes: " + mInnovations[position].NumberOfLikes;
+            innovationLikes.Click += delegate
+            {
+                likeButtonClicked = false;
+                if (likeButtonClicked == false)
+                {
+                    mInnovations[position].NumberOfLikes = mInnovations[position].NumberOfLikes + 1;
+                    likeButtonClicked = true;
+                    innovationLikes.Text = $"Likes: {mInnovations[position].NumberOfLikes.ToString()}";
+                }
+                else
+                {
+                    mInnovations[position].NumberOfLikes = mInnovations[position].NumberOfLikes - 1;
+                    likeButtonClicked = false;
+                    innovationLikes.Text = $"Likes: {mInnovations[position].NumberOfLikes.ToString()}";
+                }
+            };
 
             return row;
         }

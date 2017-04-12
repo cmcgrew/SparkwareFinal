@@ -25,17 +25,11 @@ namespace SparkwareFinal.Fragments
         DiscoverListViewAdapter innovationAdapter;
         ListView mListView;
         Spinner discoverSpinner;
-        TableLayout tableLayout;
-        LinearLayout parent;
-        ScrollView scrollView;
         Innovation innovation1;
         Innovation innovation2;
         Innovation innovation3;
         Innovation innovation4;
         Innovation innovation5;
-        Innovation selectedInnovaiton;
-
-        
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -51,7 +45,6 @@ namespace SparkwareFinal.Fragments
             mListView = view.FindViewById<ListView>(Resource.Id.discoverListView);
 
             discoverSpinner = view.FindViewById<Spinner>(Resource.Id.discoverSpinner);
-            // discoverSpinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
             discoverSpinner.ItemSelected += spinner_ItemSelected;
 
             var adapter = ArrayAdapter.CreateFromResource(this.Context, Resource.Array.DiscoverFilter, Android.Resource.Layout.SimpleSpinnerItem);
@@ -63,7 +56,17 @@ namespace SparkwareFinal.Fragments
 
             mListView.Adapter = innovationAdapter;
 
+            mListView.ItemClick += MListView_ItemClick;
+
             return view;
+        }
+
+        private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            Toast.MakeText(this.Context, filteredList[e.Position].Title, ToastLength.Short).Show();
+            //var activity2 = new Intent(this, typeof(EnrollActivity));
+            //activity2.PutExtra("InnovationID", filteredList[e.Position].Id);
+            //StartActivity(activity2);
         }
 
         private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
@@ -80,14 +83,14 @@ namespace SparkwareFinal.Fragments
 
             else if (spinner.GetItemAtPosition(e.Position).Equals("Newest"))
             {
-                filteredList = innovations.OrderBy(x => x.CreationDate).ToList();
+                filteredList = innovations.OrderByDescending(x => x.CreationDate).ToList();
                 innovationAdapter.Update(filteredList);
                 this.Activity.RunOnUiThread(() => innovationAdapter.NotifyDataSetChanged());
             }
 
             else if (spinner.GetItemAtPosition(e.Position).Equals("Oldest"))
             {
-                filteredList = innovations.OrderByDescending(x => x.CreationDate).ToList();
+                filteredList = innovations.OrderBy(x => x.CreationDate).ToList();
                 innovationAdapter.Update(filteredList);
                 this.Activity.RunOnUiThread(() => innovationAdapter.NotifyDataSetChanged());
             }
@@ -285,7 +288,7 @@ namespace SparkwareFinal.Fragments
             innovation5 = new Innovation();
 
             innovation5.Title = "This is innovation 5";
-            innovation1.CreationDate = new DateTime(2016, 5, 11);
+            innovation5.CreationDate = new DateTime(2016, 5, 11);
             innovation5.Contributor = "Abdul";
             innovation5.ImageId = (int)typeof(Resource.Drawable).GetField("home").GetValue(null);
             innovation5.DescriptionShort = "Innovation 5 short description";

@@ -120,12 +120,14 @@
     <Compile Include="DiscoverListViewAdapter.cs" />
     <Compile Include="Fragments\AchievementFragment.cs" />
     <Compile Include="Fragments\MyAccountFragment.cs" />
+    <Compile Include="Fragments\PatentTreeFragment.cs" />
     <Compile Include="Fragments\SubmitIdeaFragment.cs" />
     <Compile Include="Fragments\DiscoverFragment.cs" />
     <Compile Include="Fragments\HomeFragment.cs" />
     <Compile Include="Innovation.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="PatentListViewAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
@@ -154,6 +156,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\discover_row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\patenttree_row.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\patenttree_page.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -206,6 +214,17 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\badge1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\customshape2.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leaf_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leaf.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
