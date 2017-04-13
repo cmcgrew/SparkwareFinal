@@ -56,7 +56,7 @@ namespace SparkwareFinal.Fragments
             {
                 // Send simple e-mail to single receiver without attachments, CC, or BCC.
                 emailTask.SendEmail("maretemugambi@gmail.com", "Xamarin Messaging Plugin", "Hello from your friends at Xamarin!");
-                //emailTask.SetType("message/rfc822");
+                // emailTask.SetType("message/rfc822");
                 {
                     Toast.MakeText(Activity, "Email Sent!", ToastLength.Long).Show();
                 };

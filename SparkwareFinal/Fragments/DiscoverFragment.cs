@@ -64,9 +64,9 @@ namespace SparkwareFinal.Fragments
         private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             Toast.MakeText(this.Context, filteredList[e.Position].Title, ToastLength.Short).Show();
-            //var activity2 = new Intent(this, typeof(EnrollActivity));
+            Intent enrollmentActivity = new Intent(this.Context, typeof(EnrollmentActivity));
             //activity2.PutExtra("InnovationID", filteredList[e.Position].Id);
-            //StartActivity(activity2);
+            StartActivity(enrollmentActivity);
         }
 
         private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)

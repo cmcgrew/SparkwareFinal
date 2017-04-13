@@ -44,6 +44,7 @@ namespace SparkwareFinal.Fragments
 
             patentTreeListView.Adapter = patentTreeAdapter;
 
+
             return view;
         }
 
