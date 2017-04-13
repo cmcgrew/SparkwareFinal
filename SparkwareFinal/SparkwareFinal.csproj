@@ -119,6 +119,7 @@
     <Compile Include="Achievement.cs" />
     <Compile Include="DiscoverListViewAdapter.cs" />
     <Compile Include="Fragments\AchievementFragment.cs" />
+    <Compile Include="Fragments\EnrollmentFragment.cs" />
     <Compile Include="Fragments\MyAccountFragment.cs" />
     <Compile Include="Fragments\PatentTreeFragment.cs" />
     <Compile Include="Fragments\SubmitIdeaFragment.cs" />
@@ -162,6 +163,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\patenttree_page.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\enrollment_page.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -225,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\leaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Usaavoiceguideddeposits.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <ImageView
+        android:src="@drawable/Usaavoiceguideddeposits"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:id="@+id/imageView1" />
+    <TextView
+        android:text="Depositing a check through the USAA Mobile App shouldn't be a complicated task, but for our visually impaired members it was nearly impossible. Now, voice commands guide members through the process, telling them to 'push out,' 'pull in' or 'move right' to capture a check's image and deposit it into their account."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <Button
+        android:text="Enroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
+</LinearLayout>
