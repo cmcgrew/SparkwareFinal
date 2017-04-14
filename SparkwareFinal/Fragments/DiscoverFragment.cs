@@ -65,7 +65,7 @@ namespace SparkwareFinal.Fragments
         {
             Toast.MakeText(this.Context, filteredList[e.Position].Title, ToastLength.Short).Show();
             Intent enrollmentActivity = new Intent(this.Context, typeof(EnrollmentActivity));
-            //activity2.PutExtra("InnovationID", filteredList[e.Position].Id);
+            enrollmentActivity.PutExtra("InnovationID", filteredList[e.Position].Id);
             StartActivity(enrollmentActivity);
         }
 
@@ -73,6 +73,8 @@ namespace SparkwareFinal.Fragments
         {
             var spinner = sender as Spinner;
             filteredList = new List<Innovation>();
+            InstantiateVariables();
+            filteredList = innovations;
 
             if (spinner.GetItemAtPosition(e.Position).Equals("Most Popular"))
             {
@@ -94,7 +96,24 @@ namespace SparkwareFinal.Fragments
                 innovationAdapter.Update(filteredList);
                 this.Activity.RunOnUiThread(() => innovationAdapter.NotifyDataSetChanged());
             }
-
+            else if (spinner.GetItemAtPosition(e.Position).Equals("Oldest"))
+            {
+                filteredList = innovations.OrderBy(x => x.CreationDate).ToList();
+                innovationAdapter.Update(filteredList);
+                this.Activity.RunOnUiThread(() => innovationAdapter.NotifyDataSetChanged());
+            }
+            else if (spinner.GetItemAtPosition(e.Position).Equals("USAA Innovations"))
+            {
+                filteredList = innovations.Where(x => x.Contributor == "USAA").ToList();
+                innovationAdapter.Update(filteredList);
+                this.Activity.RunOnUiThread(() => innovationAdapter.NotifyDataSetChanged());
+            }
+            else if (spinner.GetItemAtPosition(e.Position).Equals("Member Innovations"))
+            {
+                filteredList = innovations.Where(x => x.Contributor != "USAA").ToList();
+                innovationAdapter.Update(filteredList);
+                this.Activity.RunOnUiThread(() => innovationAdapter.NotifyDataSetChanged());
+            }
             else
             {
                 //do nothing
@@ -239,6 +258,7 @@ namespace SparkwareFinal.Fragments
             innovations = new List<Innovation>();
             innovation1 = new Innovation();
 
+            innovation1.Id = 1;
             innovation1.Title = "Voice Guided Deposits";
             innovation1.Contributor = "USAA";
             innovation1.CreationDate = new DateTime(2017, 4, 9);
@@ -251,6 +271,7 @@ namespace SparkwareFinal.Fragments
 
             innovation2 = new Innovation();
 
+            innovation2.Id = 2;
             innovation2.Title = "This is innovation 2";
             innovation2.Contributor = "Chris McGrew";
             innovation2.CreationDate = new DateTime(2017, 2, 10);
@@ -263,6 +284,7 @@ namespace SparkwareFinal.Fragments
 
             innovation3 = new Innovation();
 
+            innovation3.Id = 3;
             innovation3.Title = "This is innovation 3";
             innovation3.Contributor = "Melvin Montenegro";
             innovation3.CreationDate = new DateTime(2017, 4, 9);
@@ -275,6 +297,7 @@ namespace SparkwareFinal.Fragments
 
             innovation4 = new Innovation();
 
+            innovation4.Id = 4;
             innovation4.Title = "This is innovation 4";
             innovation4.Contributor = "Marete";
             innovation4.CreationDate = new DateTime(2016, 1, 12);
@@ -287,6 +310,7 @@ namespace SparkwareFinal.Fragments
 
             innovation5 = new Innovation();
 
+            innovation5.Id = 5;
             innovation5.Title = "This is innovation 5";
             innovation5.CreationDate = new DateTime(2016, 5, 11);
             innovation5.Contributor = "Abdul";

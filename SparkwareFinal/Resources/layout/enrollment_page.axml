@@ -6,16 +6,14 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <ImageView
-        android:src="@drawable/Usaavoiceguideddeposits"
         android:layout_width="match_parent"
         android:layout_height="340dp"
-        android:id="@+id/imageView1" />
+        android:id="@+id/innovationImage" />
     <TextView
-        android:text="Depositing a check through the USAA Mobile App shouldn't be a complicated task, but for our visually impaired members it was nearly impossible. Now, voice commands guide members through the process, telling them to 'push out,' 'pull in' or 'move right' to capture a check's image and deposit it into their account."
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/innovationDescriptionLong" />
     <Button
         android:text="Enroll"
         android:layout_width="match_parent"

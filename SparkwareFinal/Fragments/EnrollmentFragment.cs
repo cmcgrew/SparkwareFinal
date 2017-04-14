@@ -15,6 +15,7 @@ namespace SparkwareFinal.Fragments
 {
     public class EnrollmentFragment : Fragment
     {
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -29,5 +30,7 @@ namespace SparkwareFinal.Fragments
 
             return base.OnCreateView(inflater, container, savedInstanceState);
         }
+
+       
     }
 }

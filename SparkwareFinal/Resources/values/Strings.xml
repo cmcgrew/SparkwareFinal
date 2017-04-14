@@ -5,6 +5,8 @@
 
   <string-array name="DiscoverFilter">
     <item>Most Popular</item>
+    <item>USAA Innovations</item>
+    <item>Member Innovations</item>
     <item>Newest</item>
     <item>Oldest</item>
   </string-array>
