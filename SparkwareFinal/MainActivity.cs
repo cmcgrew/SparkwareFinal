@@ -77,11 +77,6 @@ namespace SparkwareFinal
             mCurrentFragment = mHomeFragment;
         }
 
-        private void BtnSubmitIdea_Click(object sender, System.EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             //Display toolbar icons
