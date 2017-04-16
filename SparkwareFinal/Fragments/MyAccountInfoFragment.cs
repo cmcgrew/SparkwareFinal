@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace SparkwareFinal.Fragments
 {
-    public class MyAccountInfoFragment : Fragment
+    public class MyAccountInfoFragment : Android.Support.V4.App.Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {

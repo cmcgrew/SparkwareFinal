@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,13 +7,13 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 
-namespace SparkwareFinal.Fragments
+namespace SparkwareFinal
 {
-    public class PatentTreeFragment : Android.Support.V4.App.Fragment
+    [Activity(Label = "PatentTreeActivity")]
+    public class PatentTreeActivity : Activity
     {
         List<Innovation> innovations;
         Innovation innovation1;
@@ -21,41 +21,23 @@ namespace SparkwareFinal.Fragments
         Innovation innovation3;
         Innovation innovation4;
         Innovation innovation5;
-        View view;
-        ListView patentTreeListView;
-        PatentListViewAdapter patentTreeAdapter;
-
-        public override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-
-            // Create your fragment here
-        }
-
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        List<Innovation> selectedInnovation;
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             InstantiateVariables();
-            view = inflater.Inflate(Resource.Layout.patenttree_page, container, false);
+            base.OnCreate(savedInstanceState);
 
-            patentTreeListView = view.FindViewById<ListView>(Resource.Id.patentTreeListView);
+            SetContentView(Resource.Layout.patenttreeinfo_page);
 
+            ImageView patentTreeImage = FindViewById<ImageView>(Resource.Id.patentTreeImage);
+            TextView patentTreeDescriptionLong = FindViewById<TextView>(Resource.Id.patentTreeDescriptionLong);
 
-            patentTreeAdapter = new PatentListViewAdapter(this.Activity, innovations);
+            int innovationId = Intent.GetIntExtra("InnovationID", 0);
 
-            patentTreeListView.Adapter = patentTreeAdapter;
+            selectedInnovation = innovations.Where(x => x.Id == innovationId).ToList();
 
-            patentTreeListView.ItemClick += PatentTreeListView_ItemClick;
-
-
-            return view;
-        }
-
-        private void PatentTreeListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-            Toast.MakeText(this.Context, innovations[e.Position].Title, ToastLength.Short).Show();
-            Intent enrollmentActivity = new Intent(this.Context, typeof(PatentTreeActivity));
-            enrollmentActivity.PutExtra("InnovationID", innovations[e.Position].Id);
-            StartActivity(enrollmentActivity);
+            //patentTreeImage.SetBackgroundResource(selectedInnovation[0].ImageId);
+            //patentTreeDescriptionLong.Text = selectedInnovation[0].DescriptionLong;
         }
 
         private void InstantiateVariables()
@@ -63,6 +45,7 @@ namespace SparkwareFinal.Fragments
             innovations = new List<Innovation>();
             innovation1 = new Innovation();
 
+            innovation1.Id = 1;
             innovation1.Title = "Voice Guided Deposits";
             innovation1.Contributor = "USAA";
             innovation1.CreationDate = new DateTime(2017, 4, 9);
@@ -75,6 +58,7 @@ namespace SparkwareFinal.Fragments
 
             innovation2 = new Innovation();
 
+            innovation2.Id = 2;
             innovation2.Title = "This is innovation 2";
             innovation2.Contributor = "Chris McGrew";
             innovation2.CreationDate = new DateTime(2017, 2, 10);
@@ -87,6 +71,7 @@ namespace SparkwareFinal.Fragments
 
             innovation3 = new Innovation();
 
+            innovation3.Id = 3;
             innovation3.Title = "This is innovation 3";
             innovation3.Contributor = "Melvin Montenegro";
             innovation3.CreationDate = new DateTime(2017, 4, 9);
@@ -99,6 +84,7 @@ namespace SparkwareFinal.Fragments
 
             innovation4 = new Innovation();
 
+            innovation4.Id = 4;
             innovation4.Title = "This is innovation 4";
             innovation4.Contributor = "Marete";
             innovation4.CreationDate = new DateTime(2016, 1, 12);
@@ -111,8 +97,9 @@ namespace SparkwareFinal.Fragments
 
             innovation5 = new Innovation();
 
+            innovation5.Id = 5;
             innovation5.Title = "This is innovation 5";
-            innovation1.CreationDate = new DateTime(2016, 5, 11);
+            innovation5.CreationDate = new DateTime(2016, 5, 11);
             innovation5.Contributor = "Abdul";
             innovation5.ImageId = (int)typeof(Resource.Drawable).GetField("home").GetValue(null);
             innovation5.DescriptionShort = "Innovation 5 short description";

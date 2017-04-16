@@ -25,10 +25,6 @@
   
   <!--Preferences Menu Options-->
   <item
-       android:id="@+id/achievements"
-       app:showAsAction="never"
-       android:title="Achievements" />
-  <item
        android:id="@+id/patentTree"
        app:showAsAction="never"
        android:title="Member Patent Tree" />

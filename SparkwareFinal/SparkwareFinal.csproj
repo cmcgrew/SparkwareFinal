@@ -132,6 +132,7 @@
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="PatentListViewAdapter.cs" />
+    <Compile Include="PatentTreeActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
@@ -178,6 +179,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\mysubmission_page.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\patenttreeinfo_page.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
