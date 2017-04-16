@@ -38,9 +38,9 @@ namespace SparkwareFinal.Fragments
 
             mTabHost.Setup(this.Activity, ChildFragmentManager, Resource.Id.realtabcontent);
 
-            mTabHost.AddTab(mTabHost.NewTabSpec("myaccount").SetIndicator("My Account"), Java.Lang.Class.FromType(typeof(SubmitIdeaFragment)), null);
+            mTabHost.AddTab(mTabHost.NewTabSpec("myaccount").SetIndicator("My Account"), Java.Lang.Class.FromType(typeof(MyAccountInfoFragment)), null);
             mTabHost.AddTab(mTabHost.NewTabSpec("submissions").SetIndicator("Submissions"), Java.Lang.Class.FromType(typeof(HomeFragment)), null);
-            mTabHost.AddTab(mTabHost.NewTabSpec("badges").SetIndicator("Badges"), Java.Lang.Class.FromType(typeof(PatentTreeFragment)), null);
+            mTabHost.AddTab(mTabHost.NewTabSpec("badges").SetIndicator("Badges"), Java.Lang.Class.FromType(typeof(AchievementFragment)), null);
 
             return view;
         }
