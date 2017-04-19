@@ -10,6 +10,7 @@ using SupportFragment = Android.Support.V4.App.Fragment;
 using System.Collections.Generic;
 using Plugin.Messaging;
 using System.Net;
+using Android.Content;
 
 namespace SparkwareFinal
 {
@@ -23,6 +24,7 @@ namespace SparkwareFinal
         private SubmitIdeaFragment mSubmitIdeaFragment;
         private MyAccountFragment mMyAccountFragment;
         private AchievementFragment mAchievementFragment;
+        protected actEmail emailPage;
 
         //This keeps track of the "stack" of pages so that the back button works correctly... bugs out if not used
         private Stack<SupportFragment> mStackFragment;
@@ -38,10 +40,14 @@ namespace SparkwareFinal
             mMyAccountFragment = new MyAccountFragment();
             mAchievementFragment = new AchievementFragment();
 
-            mStackFragment = new Stack<SupportFragment>();  
+            //var varEmailPage = FindViewById<Toolbar>(Resource.Id.toolbar);
+            //SetActionBar(varTopToolbar);
+            //ActionBar.Title = "SPARKWARE"
+
+            mStackFragment = new Stack<SupportFragment>();
 
             // Set our view from the "main" layout resource
-            SetContentView (Resource.Layout.Main);
+            SetContentView(Resource.Layout.Main);
 
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -50,7 +56,7 @@ namespace SparkwareFinal
             // Transactions are needed to change between pages
             var trans = SupportFragmentManager.BeginTransaction();
 
-            // Add fragment to the tranaction and hide it (only 1 is needed to be shown at a time, the last one)
+            // Add fragment to the transaction and hide it (only 1 is needed to be shown at a time, the last one)
             trans.Add(Resource.Id.fragmentContainer, mAchievementFragment, "AchievementFragment");
             trans.Hide(mAchievementFragment);
 
@@ -64,19 +70,15 @@ namespace SparkwareFinal
             trans.Hide(mDiscoverFragment);
 
             trans.Add(Resource.Id.fragmentContainer, mHomeFragment, "HomeFragment");
-            
+
+            //trans.Add(Resource.Id.fragmentContainer, emailPage, "ActivityEmail");
+
             // Show fragments
             trans.Commit();
 
             // Tracks the current fragment being shown, right now it is the home fragment
-            mCurrentFragment = mHomeFragment;
+            mCurrentFragment = mHomeFragment;            
         }
-
-        private void BtnSubmitIdea_Click(object sender, System.EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             //Display toolbar icons
@@ -86,6 +88,10 @@ namespace SparkwareFinal
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
+            var sendEmail = new Intent(this, typeof(actEmail));
+            if (item.ItemId == Resource.Id.idEmail)
+                StartActivity(sendEmail);
+
             // Depending on which button is clicked, show that fragment
             switch (item.ItemId)
             {
@@ -144,7 +150,7 @@ namespace SparkwareFinal
             {
                 base.OnBackPressed();
             }
-        }
+        }        
     }
 }
 
