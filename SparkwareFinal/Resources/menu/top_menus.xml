@@ -30,9 +30,9 @@
   
   <!--Preferences Menu Options-->
   <item
-       android:id="@+id/achievements"
+       android:id="@+id/patentTree"
        app:showAsAction="never"
-       android:title="Achievements" />
+       android:title="Member Patent Tree" />
   <item
        android:id="@+id/logout"
        app:showAsAction="never"

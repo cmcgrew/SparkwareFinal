@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@drawable/customshape"
+        android:id="@+id/innovationContainer"
+        android:weightSum="100"
+        android:layout_marginTop="4dp">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/innovationImage"
+            android:background="@drawable/icon"
+            android:layout_weight="40" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/innovationTextContainer"
+            android:layout_weight="60">
+            <TextView
+                android:text="Title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="3dp"
+                android:id="@+id/innovationTitle"
+                android:textColor="#000" />
+            <TextView
+                android:text="Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/innovationDescription"
+                android:layout_marginLeft="3dp"
+                android:textSize="15sp"
+                android:textColor="#000" />
+            <TextView
+                android:text="Date: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/innovationDate"
+                android:layout_marginLeft="3dp"
+                android:textSize="15sp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:id="@+id/linearLayout1"
+                android:weightSum="100">
+                <TextView
+                    android:text="Sent"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:layout_weight="25" />
+                <TextView
+                    android:text="Received"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_weight="25" />
+                <TextView
+                    android:text="Under Review"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_weight="25" />
+                <TextView
+                    android:text="Done"
+                    android:textColor="#000"
+                    android:textSize="10sp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:layout_weight="25" />
+            </LinearLayout>
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#FFF"
+                android:id="@+id/progressBar1"
+                android:max="100"
+                android:progress="30" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

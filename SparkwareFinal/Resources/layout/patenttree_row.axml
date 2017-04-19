@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/customshape"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayout1"
+        android:gravity="center">
+        <TextView
+            android:text="Chris M. McGrew"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:background="@drawable/customshape2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:paddingTop="3dp"
+            android:id="@+id/name" />
+        <TextView
+            android:text="Lorem ipsum dolor sit amet, ei nam virtute pertinax, dicta soleat sensibus duo at."
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:id="@+id/description" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout2"
+            android:weightSum="100">
+            <ImageView
+                android:src="@drawable/leaf_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView1"
+                android:layout_weight="33.33"
+                android:paddingBottom="4dp" />
+            <TextView
+                android:text="April 11, 2017"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/date"
+                android:layout_weight="33.33" />
+            <ImageView
+                android:src="@drawable/leaf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="33.33"
+                android:id="@+id/imageView2"
+                android:paddingBottom="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
