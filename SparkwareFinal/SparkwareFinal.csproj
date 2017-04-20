@@ -172,9 +172,6 @@
     <AndroidResource Include="Resources\layout\enrollment_page.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\mysubmission_row.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\accountinfo_page.axml">
       <SubType>Designer</SubType>
     </AndroidResource>

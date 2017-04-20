@@ -3,12 +3,24 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/patentTreeImage" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/patentTreeDescriptionLong" />
+  <TextView
+    android:text="Voice Guided Deposits"
+    android:textStyle="bold"
+    android:textSize="30sp"
+    android:gravity="center"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/innovationTitle" />
+  <ImageView
+      android:background="@drawable/VoiceGuidedDeposits"
+      android:layout_width="match_parent"
+      android:layout_height="340dp"
+      android:id="@+id/innovationImage" />
+  <TextView
+      android:text="Depositing a check through the USAA Mobile App should not be a complicated task, but for our visually impaired members it was nearly impossible. Now, voice commands guide members through the process, telling them to push out, pull in or move right to capture a checks image and deposit it into their account."
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/innovationDescriptionLong" />
 </LinearLayout>

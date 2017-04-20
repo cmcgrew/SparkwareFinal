@@ -29,12 +29,12 @@ namespace SparkwareFinal
 
             SetContentView(Resource.Layout.patenttreeinfo_page);
 
-            ImageView patentTreeImage = FindViewById<ImageView>(Resource.Id.patentTreeImage);
-            TextView patentTreeDescriptionLong = FindViewById<TextView>(Resource.Id.patentTreeDescriptionLong);
+            //ImageView patentTreeImage = FindViewById<ImageView>(Resource.Id.patentTreeImage);
+            //TextView patentTreeDescriptionLong = FindViewById<TextView>(Resource.Id.patentTreeDescriptionLong);
 
-            int innovationId = Intent.GetIntExtra("InnovationID", 0);
+            //int innovationId = Intent.GetIntExtra("InnovationID", 0);
 
-            selectedInnovation = innovations.Where(x => x.Id == innovationId).ToList();
+            //selectedInnovation = innovations.Where(x => x.Id == innovationId).ToList();
 
             //patentTreeImage.SetBackgroundResource(selectedInnovation[0].ImageId);
             //patentTreeDescriptionLong.Text = selectedInnovation[0].DescriptionLong;
