@@ -52,10 +52,10 @@ namespace SparkwareFinal.Fragments
 
         private void PatentTreeListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Toast.MakeText(this.Context, innovations[e.Position].Title, ToastLength.Short).Show();
-            Intent enrollmentActivity = new Intent(this.Context, typeof(PatentTreeActivity));
-            enrollmentActivity.PutExtra("InnovationID", innovations[e.Position].Id);
-            StartActivity(enrollmentActivity);
+            //Toast.MakeText(this.Context, innovations[e.Position].Title, ToastLength.Short).Show();
+            Intent patentTreeActivity = new Intent(this.Context, typeof(PatentTreeActivity));
+            //patentTreeActivity.PutExtra("InnovationID", innovations[e.Position].Id);
+            StartActivity(patentTreeActivity);
         }
 
         private void InstantiateVariables()
