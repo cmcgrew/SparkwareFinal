@@ -117,7 +117,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Achievement.cs" />
+    <Compile Include="actEmail.cs" />
     <Compile Include="DiscoverListViewAdapter.cs" />
+    <Compile Include="email.cs" />
     <Compile Include="Fragments\AchievementFragment.cs" />
     <Compile Include="Fragments\EnrollmentFragment.cs" />
     <Compile Include="Fragments\MyAccountFragment.cs" />
@@ -184,6 +186,7 @@
     <AndroidResource Include="Resources\layout\patenttreeinfo_page.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\email_page.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -225,20 +228,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\customshape.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\VoiceGuidedDeposits.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\badge1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\customshape2.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\leaf_left.png" />
@@ -248,6 +241,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Usaavoiceguideddeposits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\customshape.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\customshape2.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

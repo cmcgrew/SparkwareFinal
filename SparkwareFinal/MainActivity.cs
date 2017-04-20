@@ -10,7 +10,7 @@ using SupportFragment = Android.Support.V4.App.Fragment;
 using System.Collections.Generic;
 using Plugin.Messaging;
 using System.Net;
-
+using Android.Content;
 namespace SparkwareFinal
 {
     [Activity(Label = "SparkwareFinal")]
@@ -23,6 +23,7 @@ namespace SparkwareFinal
         private SubmitIdeaFragment mSubmitIdeaFragment;
         private MyAccountFragment mMyAccountFragment;
         private PatentTreeFragment mPatentTreeFragment;
+        protected actEmail emailPage;
 
         //This keeps track of the "stack" of pages so that the back button works correctly... bugs out if not used
         private Stack<SupportFragment> mStackFragment;
@@ -38,7 +39,11 @@ namespace SparkwareFinal
             mMyAccountFragment = new MyAccountFragment();
             mPatentTreeFragment = new PatentTreeFragment();
 
-            mStackFragment = new Stack<SupportFragment>();  
+            mStackFragment = new Stack<SupportFragment>();
+
+            //var varEmailPage = FindViewById<Toolbar>(Resource.Id.toolbar);
+            //SetActionBar(varTopToolbar);
+            //ActionBar.Title = "SPARKWARE"
 
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
@@ -64,7 +69,9 @@ namespace SparkwareFinal
             trans.Hide(mDiscoverFragment);
 
             trans.Add(Resource.Id.fragmentContainer, mHomeFragment, "HomeFragment");
-            
+
+            //trans.Add(Resource.Id.fragmentContainer, emailPage, "ActivityEmail");
+
             // Show fragments
             trans.Commit();
 
@@ -81,6 +88,9 @@ namespace SparkwareFinal
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
+            var sendEmail = new Intent(this, typeof(actEmail));
+                      if (item.ItemId == Resource.Id.idEmail)
+                StartActivity(sendEmail);
             // Depending on which button is clicked, show that fragment
             switch (item.ItemId)
             {

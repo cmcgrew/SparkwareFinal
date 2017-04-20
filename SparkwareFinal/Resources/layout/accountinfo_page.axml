@@ -3,11 +3,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-  <TextView
-    android:text="Account Info Page"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textColor="#000" />
-
+    <TextView
+        android:text="Account Info Page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000" />
 </LinearLayout>
