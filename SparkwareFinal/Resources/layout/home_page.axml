@@ -5,40 +5,75 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-  <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TableLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-      <TextView
-          android:text="USAA LABS"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:textSize="50sp"
-          android:textColor="#000"
-          android:textStyle="bold"
-          android:gravity="center"
-          android:id="@+id/tvHomeTitle" />
-      <TextView
-          android:text="USAA Labs provides members the opportunity to engage and provide feedback on new innovations, concepts and exclusive pilots. USAA Labs puts you, the innovator, at the forefront of innovation by providing a vibrant community where members can innovate for members."
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:textSize="20sp"
-          android:textColor="#000"
-          android:gravity="center"
-          android:id="@+id/tvHomeDescription" />
-      <TextView
-            android:text="Enrollments:"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="7dp"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:gravity="left"
-            android:id="@+id/tvHomeDescription" />
-    </TableLayout>
-  </ScrollView>
+            android:layout_height="match_parent">
+            <TextView
+                android:text="USAA LABS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="50sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:id="@+id/tvHomeTitle" />
+            <TextView
+                android:text="USAA Labs provides members the opportunity to engage and provide feedback on new innovations, concepts and exclusive pilots. USAA Labs puts you, the innovator, at the forefront of innovation by providing a vibrant community where members can innovate for members."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:id="@+id/tvHomeDescription" />
+            <TextView
+                android:text="Enrollments:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="7dp"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:id="@+id/tvHomeDescription" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/customshape"
+                android:id="@+id/innovationContainer"
+                android:weightSum="100"
+                android:layout_marginTop="4dp">
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/Usaavoiceguideddeposits"
+                    android:layout_weight="40" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/innovationTextContainer"
+                    android:layout_weight="60">
+                    <TextView
+                        android:text="Voice Guided Deposits"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:textColor="#000" />
+                </LinearLayout>
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
 </LinearLayout>
