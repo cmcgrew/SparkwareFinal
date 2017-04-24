@@ -18,6 +18,10 @@ namespace SparkwareFinal
         Button btnLogin;
         EditText etUsername;
         EditText etPassword;
+        User user1 = new User("sparkware", "password");
+        User user2 = new User("abdul", "password2");
+        List<User> users = new List<User>();
+        bool loginSuccesful = false;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -28,6 +32,9 @@ namespace SparkwareFinal
             btnLogin = FindViewById<Button>(Resource.Id.btnLogin);
             etUsername = FindViewById<EditText>(Resource.Id.etUsername);
             etPassword = FindViewById<EditText>(Resource.Id.etPassword);
+            users.Add(user1);
+            users.Add(user2);
+
 
             btnLogin.Click += BtnLogin_Click;
 
@@ -36,20 +43,27 @@ namespace SparkwareFinal
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (etUsername.Text == "sparkware")
+           
+            foreach (User u in users)
             {
-                if (etPassword.Text == "password")
+                if(loginSuccesful==true)
                 {
-                    StartActivity(typeof(MainActivity));
+                    break;
                 }
-                else
+                if (etUsername.Text == u.Login)
                 {
-                    Toast.MakeText(ApplicationContext, "Invalid Username", ToastLength.Long).Show();
+                    if (etPassword.Text == u.Password) 
+                    {
+                        loginSuccesful = true;
+                        StartActivity(typeof(MainActivity));
+                        break;
+                    }
+                    else
+                    {
+                        Toast.MakeText(ApplicationContext, "Invalid username or password", ToastLength.Long).Show();
+                    }
                 }
-            }
-            else
-            {
-                Toast.MakeText(ApplicationContext, "Invalid Username", ToastLength.Long).Show();
+                
             }
         }
     }
