@@ -23,11 +23,15 @@ namespace SparkwareFinal
         public string Password { get; set; }
         public List<string> Badges { get; set; }
 
+        public User()
+        {
+
+        }
         public User(string login, string password)
         {
             this.Login = login;
             this.Password= password;
-            string[] input = { "badge1", "badge2", "badge3", "badge4", "badge5"};
+            string[] input = { "false", "false", "false", "false", "false"};
             this.badges.AddRange(input);
         }
     }

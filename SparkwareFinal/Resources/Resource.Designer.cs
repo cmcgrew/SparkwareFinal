@@ -2343,8 +2343,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07002a
 			public const int bottom = 2131165226;
 			
-			// aapt resource value: 0x7f07008a
-			public const int btnLogin = 2131165322;
+			// aapt resource value: 0x7f07008b
+			public const int btnLogin = 2131165323;
 			
 			// aapt resource value: 0x7f07006a
 			public const int btnPicSend = 2131165290;
@@ -2352,8 +2352,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0700d3
 			public const int btnSubmitIdea = 2131165395;
 			
-			// aapt resource value: 0x7f070082
-			public const int button1 = 2131165314;
+			// aapt resource value: 0x7f070083
+			public const int button1 = 2131165315;
 			
 			// aapt resource value: 0x7f070044
 			public const int buttonPanel = 2131165252;
@@ -2406,23 +2406,23 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0700c7
 			public const int description = 2131165383;
 			
-			// aapt resource value: 0x7f07006e
-			public const int design_bottom_sheet = 2131165294;
+			// aapt resource value: 0x7f07006f
+			public const int design_bottom_sheet = 2131165295;
+			
+			// aapt resource value: 0x7f070076
+			public const int design_menu_item_action_area = 2131165302;
 			
 			// aapt resource value: 0x7f070075
-			public const int design_menu_item_action_area = 2131165301;
+			public const int design_menu_item_action_area_stub = 2131165301;
 			
 			// aapt resource value: 0x7f070074
-			public const int design_menu_item_action_area_stub = 2131165300;
+			public const int design_menu_item_text = 2131165300;
 			
 			// aapt resource value: 0x7f070073
-			public const int design_menu_item_text = 2131165299;
+			public const int design_navigation_view = 2131165299;
 			
-			// aapt resource value: 0x7f070072
-			public const int design_navigation_view = 2131165298;
-			
-			// aapt resource value: 0x7f070086
-			public const int dialogLayout = 2131165318;
+			// aapt resource value: 0x7f070087
+			public const int dialogLayout = 2131165319;
 			
 			// aapt resource value: 0x7f07000e
 			public const int disableHome = 2131165198;
@@ -2430,14 +2430,14 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0700d4
 			public const int discover = 2131165396;
 			
-			// aapt resource value: 0x7f070076
-			public const int discoverLinearLayout = 2131165302;
+			// aapt resource value: 0x7f070077
+			public const int discoverLinearLayout = 2131165303;
+			
+			// aapt resource value: 0x7f070079
+			public const int discoverListView = 2131165305;
 			
 			// aapt resource value: 0x7f070078
-			public const int discoverListView = 2131165304;
-			
-			// aapt resource value: 0x7f070077
-			public const int discoverSpinner = 2131165303;
+			public const int discoverSpinner = 2131165304;
 			
 			// aapt resource value: 0x7f07005c
 			public const int edit_query = 2131165276;
@@ -2457,11 +2457,11 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070024
 			public const int enterAlwaysCollapsed = 2131165220;
 			
-			// aapt resource value: 0x7f070089
-			public const int etPassword = 2131165321;
+			// aapt resource value: 0x7f07008a
+			public const int etPassword = 2131165322;
 			
-			// aapt resource value: 0x7f070088
-			public const int etUsername = 2131165320;
+			// aapt resource value: 0x7f070089
+			public const int etUsername = 2131165321;
 			
 			// aapt resource value: 0x7f070025
 			public const int exitUntilCollapsed = 2131165221;
@@ -2484,8 +2484,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070038
 			public const int @fixed = 2131165240;
 			
-			// aapt resource value: 0x7f07008c
-			public const int fragmentContainer = 2131165324;
+			// aapt resource value: 0x7f07008d
+			public const int fragmentContainer = 2131165325;
 			
 			// aapt resource value: 0x7f070005
 			public const int home = 2131165189;
@@ -2502,8 +2502,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07003f
 			public const int image = 2131165247;
 			
-			// aapt resource value: 0x7f070085
-			public const int imageView1 = 2131165317;
+			// aapt resource value: 0x7f070086
+			public const int imageView1 = 2131165318;
 			
 			// aapt resource value: 0x7f0700ca
 			public const int imageView2 = 2131165386;
@@ -2511,47 +2511,47 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0700c3
 			public const int info = 2131165379;
 			
-			// aapt resource value: 0x7f070079
-			public const int innovationContainer = 2131165305;
+			// aapt resource value: 0x7f07007a
+			public const int innovationContainer = 2131165306;
 			
 			// aapt resource value: 0x7f0700ad
 			public const int innovationContainer2 = 2131165357;
 			
-			// aapt resource value: 0x7f07007e
-			public const int innovationContributor = 2131165310;
-			
 			// aapt resource value: 0x7f07007f
-			public const int innovationDate = 2131165311;
+			public const int innovationContributor = 2131165311;
+			
+			// aapt resource value: 0x7f070080
+			public const int innovationDate = 2131165312;
 			
 			// aapt resource value: 0x7f0700b2
 			public const int innovationDate2 = 2131165362;
 			
-			// aapt resource value: 0x7f07007d
-			public const int innovationDescription = 2131165309;
+			// aapt resource value: 0x7f07007e
+			public const int innovationDescription = 2131165310;
 			
 			// aapt resource value: 0x7f0700b1
 			public const int innovationDescription2 = 2131165361;
 			
-			// aapt resource value: 0x7f070081
-			public const int innovationDescriptionLong = 2131165313;
+			// aapt resource value: 0x7f070082
+			public const int innovationDescriptionLong = 2131165314;
 			
-			// aapt resource value: 0x7f07007a
-			public const int innovationImage = 2131165306;
+			// aapt resource value: 0x7f07007b
+			public const int innovationImage = 2131165307;
 			
 			// aapt resource value: 0x7f0700ae
 			public const int innovationImage2 = 2131165358;
 			
-			// aapt resource value: 0x7f070080
-			public const int innovationLikes = 2131165312;
+			// aapt resource value: 0x7f070081
+			public const int innovationLikes = 2131165313;
 			
-			// aapt resource value: 0x7f07007b
-			public const int innovationTextContainer = 2131165307;
+			// aapt resource value: 0x7f07007c
+			public const int innovationTextContainer = 2131165308;
 			
 			// aapt resource value: 0x7f0700af
 			public const int innovationTextContainer2 = 2131165359;
 			
-			// aapt resource value: 0x7f07007c
-			public const int innovationTitle = 2131165308;
+			// aapt resource value: 0x7f07007d
+			public const int innovationTitle = 2131165309;
 			
 			// aapt resource value: 0x7f0700b0
 			public const int innovationTitle2 = 2131165360;
@@ -2568,8 +2568,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0700c1
 			public const int line3 = 2131165377;
 			
-			// aapt resource value: 0x7f0700a8
-			public const int linearLayout1 = 2131165352;
+			// aapt resource value: 0x7f0700a9
+			public const int linearLayout1 = 2131165353;
 			
 			// aapt resource value: 0x7f0700c8
 			public const int linearLayout2 = 2131165384;
@@ -2592,77 +2592,77 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070037
 			public const int mini = 2131165239;
 			
-			// aapt resource value: 0x7f070098
-			public const int mr_art = 2131165336;
-			
-			// aapt resource value: 0x7f07008d
-			public const int mr_chooser_list = 2131165325;
-			
-			// aapt resource value: 0x7f070090
-			public const int mr_chooser_route_desc = 2131165328;
+			// aapt resource value: 0x7f070099
+			public const int mr_art = 2131165337;
 			
 			// aapt resource value: 0x7f07008e
-			public const int mr_chooser_route_icon = 2131165326;
-			
-			// aapt resource value: 0x7f07008f
-			public const int mr_chooser_route_name = 2131165327;
-			
-			// aapt resource value: 0x7f070095
-			public const int mr_close = 2131165333;
-			
-			// aapt resource value: 0x7f07009b
-			public const int mr_control_divider = 2131165339;
-			
-			// aapt resource value: 0x7f0700a1
-			public const int mr_control_play_pause = 2131165345;
-			
-			// aapt resource value: 0x7f0700a4
-			public const int mr_control_subtitle = 2131165348;
-			
-			// aapt resource value: 0x7f0700a3
-			public const int mr_control_title = 2131165347;
-			
-			// aapt resource value: 0x7f0700a2
-			public const int mr_control_title_container = 2131165346;
-			
-			// aapt resource value: 0x7f070096
-			public const int mr_custom_control = 2131165334;
-			
-			// aapt resource value: 0x7f070097
-			public const int mr_default_control = 2131165335;
-			
-			// aapt resource value: 0x7f070092
-			public const int mr_dialog_area = 2131165330;
+			public const int mr_chooser_list = 2131165326;
 			
 			// aapt resource value: 0x7f070091
-			public const int mr_expandable_area = 2131165329;
+			public const int mr_chooser_route_desc = 2131165329;
 			
-			// aapt resource value: 0x7f0700a5
-			public const int mr_group_expand_collapse = 2131165349;
+			// aapt resource value: 0x7f07008f
+			public const int mr_chooser_route_icon = 2131165327;
 			
-			// aapt resource value: 0x7f070099
-			public const int mr_media_main_control = 2131165337;
+			// aapt resource value: 0x7f070090
+			public const int mr_chooser_route_name = 2131165328;
 			
-			// aapt resource value: 0x7f070094
-			public const int mr_name = 2131165332;
-			
-			// aapt resource value: 0x7f07009a
-			public const int mr_playback_control = 2131165338;
-			
-			// aapt resource value: 0x7f070093
-			public const int mr_title_bar = 2131165331;
+			// aapt resource value: 0x7f070096
+			public const int mr_close = 2131165334;
 			
 			// aapt resource value: 0x7f07009c
-			public const int mr_volume_control = 2131165340;
+			public const int mr_control_divider = 2131165340;
+			
+			// aapt resource value: 0x7f0700a2
+			public const int mr_control_play_pause = 2131165346;
+			
+			// aapt resource value: 0x7f0700a5
+			public const int mr_control_subtitle = 2131165349;
+			
+			// aapt resource value: 0x7f0700a4
+			public const int mr_control_title = 2131165348;
+			
+			// aapt resource value: 0x7f0700a3
+			public const int mr_control_title_container = 2131165347;
+			
+			// aapt resource value: 0x7f070097
+			public const int mr_custom_control = 2131165335;
+			
+			// aapt resource value: 0x7f070098
+			public const int mr_default_control = 2131165336;
+			
+			// aapt resource value: 0x7f070093
+			public const int mr_dialog_area = 2131165331;
+			
+			// aapt resource value: 0x7f070092
+			public const int mr_expandable_area = 2131165330;
+			
+			// aapt resource value: 0x7f0700a6
+			public const int mr_group_expand_collapse = 2131165350;
+			
+			// aapt resource value: 0x7f07009a
+			public const int mr_media_main_control = 2131165338;
+			
+			// aapt resource value: 0x7f070095
+			public const int mr_name = 2131165333;
+			
+			// aapt resource value: 0x7f07009b
+			public const int mr_playback_control = 2131165339;
+			
+			// aapt resource value: 0x7f070094
+			public const int mr_title_bar = 2131165332;
 			
 			// aapt resource value: 0x7f07009d
-			public const int mr_volume_group_list = 2131165341;
+			public const int mr_volume_control = 2131165341;
 			
-			// aapt resource value: 0x7f07009f
-			public const int mr_volume_item_icon = 2131165343;
+			// aapt resource value: 0x7f07009e
+			public const int mr_volume_group_list = 2131165342;
 			
 			// aapt resource value: 0x7f0700a0
-			public const int mr_volume_slider = 2131165344;
+			public const int mr_volume_item_icon = 2131165344;
+			
+			// aapt resource value: 0x7f0700a1
+			public const int mr_volume_slider = 2131165345;
 			
 			// aapt resource value: 0x7f070016
 			public const int multiply = 2131165206;
@@ -2670,8 +2670,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0700c6
 			public const int name = 2131165382;
 			
-			// aapt resource value: 0x7f070071
-			public const int navigation_header_container = 2131165297;
+			// aapt resource value: 0x7f070072
+			public const int navigation_header_container = 2131165298;
 			
 			// aapt resource value: 0x7f070021
 			public const int never = 2131165217;
@@ -2712,8 +2712,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070054
 			public const int radio = 2131165268;
 			
-			// aapt resource value: 0x7f0700a7
-			public const int realtabcontent = 2131165351;
+			// aapt resource value: 0x7f0700a8
+			public const int realtabcontent = 2131165352;
 			
 			// aapt resource value: 0x7f070030
 			public const int right = 2131165232;
@@ -2781,11 +2781,11 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070013
 			public const int showTitle = 2131165203;
 			
-			// aapt resource value: 0x7f070070
-			public const int snackbar_action = 2131165296;
+			// aapt resource value: 0x7f070071
+			public const int snackbar_action = 2131165297;
 			
-			// aapt resource value: 0x7f07006f
-			public const int snackbar_text = 2131165295;
+			// aapt resource value: 0x7f070070
+			public const int snackbar_text = 2131165296;
 			
 			// aapt resource value: 0x7f070027
 			public const int snap = 2131165223;
@@ -2823,8 +2823,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07000d
 			public const int tabMode = 2131165197;
 			
-			// aapt resource value: 0x7f0700a6
-			public const int tabhost = 2131165350;
+			// aapt resource value: 0x7f0700a7
+			public const int tabhost = 2131165351;
 			
 			// aapt resource value: 0x7f0700c2
 			public const int text = 2131165378;
@@ -2844,8 +2844,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f0700b3
 			public const int textView12 = 2131165363;
 			
-			// aapt resource value: 0x7f0700a9
-			public const int textView2 = 2131165353;
+			// aapt resource value: 0x7f07006d
+			public const int textView2 = 2131165293;
 			
 			// aapt resource value: 0x7f0700b4
 			public const int textView22 = 2131165364;
@@ -2871,8 +2871,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070048
 			public const int title_template = 2131165256;
 			
-			// aapt resource value: 0x7f07008b
-			public const int toolbar = 2131165323;
+			// aapt resource value: 0x7f07008c
+			public const int toolbar = 2131165324;
 			
 			// aapt resource value: 0x7f070032
 			public const int top = 2131165234;
@@ -2880,17 +2880,17 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f070047
 			public const int topPanel = 2131165255;
 			
-			// aapt resource value: 0x7f07006d
-			public const int touch_outside = 2131165293;
+			// aapt resource value: 0x7f07006e
+			public const int touch_outside = 2131165294;
+			
+			// aapt resource value: 0x7f070085
+			public const int tvHomeDescription = 2131165317;
 			
 			// aapt resource value: 0x7f070084
-			public const int tvHomeDescription = 2131165316;
+			public const int tvHomeTitle = 2131165316;
 			
-			// aapt resource value: 0x7f070083
-			public const int tvHomeTitle = 2131165315;
-			
-			// aapt resource value: 0x7f070087
-			public const int tvLoginTitle = 2131165319;
+			// aapt resource value: 0x7f070088
+			public const int tvLoginTitle = 2131165320;
 			
 			// aapt resource value: 0x7f0700d1
 			public const int txtEnterFeedback = 2131165393;
@@ -2907,8 +2907,8 @@ namespace SparkwareFinal
 			// aapt resource value: 0x7f07000a
 			public const int view_offset_helper = 2131165194;
 			
-			// aapt resource value: 0x7f07009e
-			public const int volume_item_container = 2131165342;
+			// aapt resource value: 0x7f07009f
+			public const int volume_item_container = 2131165343;
 			
 			// aapt resource value: 0x7f070022
 			public const int withText = 2131165218;
