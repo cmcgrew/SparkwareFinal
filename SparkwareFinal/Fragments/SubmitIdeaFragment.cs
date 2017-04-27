@@ -5,6 +5,7 @@ using Android.Widget;
 using Plugin.Messaging;// Add this and the one below to your processor directives
 using System.Net;
 using Android.App;
+using Android.Content;
 
 namespace SparkwareFinal.Fragments
 {
@@ -23,6 +24,8 @@ namespace SparkwareFinal.Fragments
             
             Button submitIdeaButton = view.FindViewById<Button>(Resource.Id.btnSubmitIdea);
             submitIdeaButton.Click += SubmitIdeaButon_Click;
+
+
             
             return view;
 

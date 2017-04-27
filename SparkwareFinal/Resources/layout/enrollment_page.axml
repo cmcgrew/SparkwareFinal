@@ -4,19 +4,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
-    <ImageView
+    android:minHeight="25px"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:id="@+id/innovationImage" />
-    <TextView
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/innovationDescriptionLong" />
-    <Button
-        android:text="Enroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="@+id/scrollView1">
+        <TableLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout1">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:id="@+id/innovationImage" />
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/innovationDescriptionLong" />
+            <Button
+                android:text="Enroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1" />
+            <TextView
+                android:text="Comments"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/innovationDescriptionLong" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/customshape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/commentsLinearLayout">
+                <TextView
+                    android:text="Chris McGrew"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commentUsername" />
+              <EditText
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commentEditText" />
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commentTextView"
+                    android:visibility="gone" />
+                <Button
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commentButton" />
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
 </LinearLayout>
