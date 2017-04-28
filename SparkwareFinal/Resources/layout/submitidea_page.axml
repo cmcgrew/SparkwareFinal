@@ -65,4 +65,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnCheckConnection" />
+  <Button
+    android:text="Read Idea Out Loud"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnReadIdea"/>
 </LinearLayout>

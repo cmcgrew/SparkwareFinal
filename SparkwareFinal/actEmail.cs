@@ -22,6 +22,7 @@ using Uri = Android.Net.Uri;
 using System.Collections;
 using System.Text;
 using System.Drawing;
+using SparkwareFinal.Fragments;
 
 namespace SparkwareFinal
 {
@@ -29,6 +30,7 @@ namespace SparkwareFinal
     public class actEmail : Activity
 
     {
+        SubmitIdeaFragment   objSubmitIdeaFragment = new SubmitIdeaFragment();
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -44,6 +46,8 @@ namespace SparkwareFinal
             var edtMessage = FindViewById<EditText>(Resource.Id.edtMessage);
             var btnSend = FindViewById<Button>(Resource.Id.btnSend);
             var btnPicSend = FindViewById<Button>(Resource.Id.btnPicSend);
+
+            edtSubject = objSubmitIdeaFragment.edtFeedBackText; //FindViewById<EditText>(Resource.Id.txtEnterFeedback);
 
             btnPicSend.Click += (s, e) =>
             {
@@ -62,9 +66,9 @@ namespace SparkwareFinal
         {
         //This is the original code
         Intent email = new Intent(Intent.ActionSend);
-        email.PutExtra(Intent.ExtraEmail, edtTo.Text.ToString());
-        email.PutExtra(Intent.ExtraSubject, edtSubject.Text.ToString());
-        email.PutExtra(Intent.ExtraText, edtMessage.Text.ToString());
+        email.PutExtra(Intent.ExtraEmail, edtTo.Text);
+        email.PutExtra(Intent.ExtraSubject, edtSubject.Text);
+        email.PutExtra(Intent.ExtraText, edtMessage.Text);
         email.SetType("message/rfc822");
 
         StartActivity(Intent.CreateChooser(email, "Choose an Email client :"));

@@ -2,10 +2,11 @@ using System;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Plugin.Messaging;// Add this and the one below to your processor directives
+using Plugin.Messaging;
 using System.Net;
 using Android.App;
 using Android.Content;
+using Plugin.TextToSpeech;
 
 namespace SparkwareFinal.Fragments
 {
@@ -13,6 +14,7 @@ namespace SparkwareFinal.Fragments
     {
         public EditText edtFeedBackText;
         public EditText edtEmailText;
+        public Button btnReadEmailText;
 
         int counter = 0;
 
@@ -28,13 +30,22 @@ namespace SparkwareFinal.Fragments
             
             Button submitIdeaButton = view.FindViewById<Button>(Resource.Id.btnSubmitIdea);
             submitIdeaButton.Click += SubmitIdeaButon_Click;
-            submitIdeaButton.Click += StartEmailActivity;
+            //submitIdeaButton.Click += StartEmailActivity;
 
             edtFeedBackText = view.FindViewById<EditText>(Resource.Id.txtEnterFeedback);
 
             edtEmailText = view.FindViewById<EditText>(Resource.Id.txtEnterEmail);
 
+            btnReadEmailText = view.FindViewById<Button>(Resource.Id.btnReadIdea);
+            btnReadEmailText.Click += BtnReadEmailText_Click;
+
             return view;
+        }
+
+        private void BtnReadEmailText_Click(object sender, EventArgs e)
+        {
+            var textToread = edtFeedBackText.Text;
+            CrossTextToSpeech.Current.Speak(textToread);
         }
 
         //I have commented out this portion because we know it works
@@ -67,8 +78,11 @@ namespace SparkwareFinal.Fragments
                         Toast.MakeText(Activity, "You have already earned this badge. On to the next one!", ToastLength.Long).Show();
                     }
                 }
-
-                SendEmail();
+                {
+                    Intent intent = new Intent(this.Activity, typeof(actEmail));
+                    StartActivity(intent);
+                }
+            SendEmail();
             }
             else
             {
