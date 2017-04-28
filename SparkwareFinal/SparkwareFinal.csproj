@@ -127,7 +127,6 @@
     <Compile Include="DiscoverListViewAdapter.cs" />
     <Compile Include="email.cs" />
     <Compile Include="Fragments\AchievementFragment.cs" />
-    <Compile Include="Fragments\EnrollmentFragment.cs" />
     <Compile Include="Fragments\MyAccountFragment.cs" />
     <Compile Include="Fragments\MyAccountInfoFragment.cs" />
     <Compile Include="Fragments\MyAccountSubmissionsFragment.cs" />
