@@ -71,8 +71,8 @@ namespace SparkwareFinal.Fragments
 
                 myAlert.Show();
 
-                Intent mainActivity = new Intent(this.Activity, typeof(MainActivity));
-                mainActivity.PutExtra("user1", JsonConvert.SerializeObject(mUser));
+                Intent mainActivity2 = new Intent(this.Activity, typeof(MainActivity));
+                mainActivity2.PutExtra("user1", JsonConvert.SerializeObject(mUser));
 
                 SendEmail();
             }

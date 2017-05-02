@@ -30,11 +30,12 @@ namespace SparkwareFinal.Fragments
         {
             View view = inflater.Inflate(Resource.Layout.achievement_page, container, false);
 
-            mUser = JsonConvert.DeserializeObject<User>(this.Activity.Intent.GetStringExtra("user1"));
+            mUser = JsonConvert.DeserializeObject<User>(this.Activity.Intent.GetStringExtra("user"));
 
-            EditText mUserLbl = view.FindViewById<EditText>(Resource.Id.textView2);
+            TextView newText = new TextView(this.Activity);
+           // EditText mUserLbl = view.FindViewById<EditText>(Resource.Id.textView2);
 
-            mUserLbl.Text = mUser.Login;
+            newText.Text = mUser.Login;
 
             return view;
         }
