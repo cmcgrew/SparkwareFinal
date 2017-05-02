@@ -22,99 +22,57 @@ using Uri = Android.Net.Uri;
 using System.Collections;
 using System.Text;
 using System.Drawing;
+using SparkwareFinal.Fragments;
 
 namespace SparkwareFinal
 {
     [Activity(Label = "Email")]
     public class actEmail : Activity
 
-    //    {
-    //        protected override void OnCreate(Bundle bundle)
-    //        {
-    //            base.OnCreate(bundle);
-
-    //            SetContentView(Resource.Layout.email_page);
-
-    //            Button sendBtn = FindViewById<Button>(Resource.Id.myButton);//This was myButton
-
-    //            sendBtn.Click += delegate
-    //            {
-    //                sendEmail();
-    //            };
-    //        }
-
-    //        void sendEmail()
-    //        {
-    //            int imgId = Resource.Drawable.test;
-    //            Bitmap bmpImg = BitmapFactory.DecodeResource(Resources, imgId);
-
-    //            MemoryStream stream = new MemoryStream();
-    //            bmpImg.Compress(Bitmap.CompressFormat.Png, 0, stream);
-    //            byte[] bm = stream.ToArray();
-
-    //            //write bytes back into the stream
-    //            MemoryStream imageStream = new MemoryStream(bm);
-
-    //            //Attachment constructor accepts three parameters, stream, imageName, and contentType
-    //            Attachment image = new Attachment(imageStream, "test.png", "image/png");
-
-    //            try
-    //            {
-    //                MailMessage mail = new MailMessage();
-    //                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-    //                mail.From = new MailAddress("myemail@gmail.com");
-    //                mail.To.Add("myBudsEmail@gmail.com");
-    //                mail.Subject = "Email with an attachment";
-    //                mail.Body = "Please see the attached picture";
-    //                mail.Attachments.Add(image);
-    //                SmtpServer.Port = 587;  //gmail default port
-    //                SmtpServer.Credentials = new System.Net.NetworkCredential("myGmailUserName", "myGmailPassword");
-    //                SmtpServer.EnableSsl = true;
-    //                ServicePointManager.ServerCertificateValidationCallback = delegate (object sender, X509Certificate certificate, X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors)
-    //                {
-    //                    return true;
-    //                };
-    //                SmtpServer.Send(mail);
-    //                Toast.MakeText(Application.Context, "Mail Sent Sucessufully", ToastLength.Short).Show();
-    //            }
-
-    //            catch (Exception ex)
-    //            {
-    //                Toast.MakeText(Application.Context, ex.ToString(), ToastLength.Long);
-    //            }
-    //        }
-
-    //    }
-    //}
-
     {
+        SubmitIdeaFragment   objSubmitIdeaFragment = new SubmitIdeaFragment();
         protected override void OnCreate(Bundle bundle)
-{
-    base.OnCreate(bundle);
+        {
+            base.OnCreate(bundle);
 
-    // Create your application here
+            // Create your application here
 
-    // Set our view from the "main" layout resource
+            // Set our view from the "main" layout resource
 
-    SetContentView(Resource.Layout.email_page);
+            SetContentView(Resource.Layout.email_page);
 
-    var edtTo = FindViewById<EditText>(Resource.Id.edtTo);
-    var edtSubject = FindViewById<EditText>(Resource.Id.edtSubject);
-    var edtMessage = FindViewById<EditText>(Resource.Id.edtMessage);
-    var btnSend = FindViewById<Button>(Resource.Id.btnSend);
+            var edtTo = FindViewById<EditText>(Resource.Id.edtTo);
+            var edtSubject = FindViewById<EditText>(Resource.Id.edtSubject);
+            var edtMessage = FindViewById<EditText>(Resource.Id.edtMessage);
+            var btnSend = FindViewById<Button>(Resource.Id.btnSend);
+            var btnPicSend = FindViewById<Button>(Resource.Id.btnPicSend);
+
+            edtSubject = objSubmitIdeaFragment.edtFeedBackText; //FindViewById<EditText>(Resource.Id.txtEnterFeedback);
+
+            btnPicSend.Click += (s, e) =>
+            {
+                //This is the original code
+                Intent email = new Intent(Intent.ActionSend);
+                email.PutExtra(Intent.ExtraEmail, edtTo.Text.ToString());
+                email.PutExtra(Intent.ExtraSubject, edtSubject.Text.ToString());
+                email.PutExtra(Intent.ExtraText, edtMessage.Text.ToString());
+                email.SetType("message/rfc822");
+
+                StartActivity(Intent.CreateChooser(email, "Choose an Email client :"));
+            };
 
 
-    btnSend.Click += (s, e) =>
-    {
+        btnSend.Click += (s, e) =>
+        {
         //This is the original code
         Intent email = new Intent(Intent.ActionSend);
-        email.PutExtra(Intent.ExtraEmail, edtTo.Text.ToString());
-        email.PutExtra(Intent.ExtraSubject, edtSubject.Text.ToString());
-        email.PutExtra(Intent.ExtraText, edtMessage.Text.ToString());
+        email.PutExtra(Intent.ExtraEmail, edtTo.Text);
+        email.PutExtra(Intent.ExtraSubject, edtSubject.Text);
+        email.PutExtra(Intent.ExtraText, edtMessage.Text);
         email.SetType("message/rfc822");
 
         StartActivity(Intent.CreateChooser(email, "Choose an Email client :"));
-    };
-}
-}
+        };
+        }
+    }
 }

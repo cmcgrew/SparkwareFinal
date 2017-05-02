@@ -2,6 +2,8 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">SparkwareFinal</string>
+    <string name="buttonText">Send an email</string>
+    <string name="app_name">SendEmail</string>
 
   <string-array name="DiscoverFilter">
     <item>Most Popular</item>

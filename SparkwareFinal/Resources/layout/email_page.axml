@@ -3,40 +3,40 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <EditText
-          android:hint="To"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:id="@+id/edtTo" />
-  <EditText
-      android:hint="Subject"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/edtSubject" />
-  <EditText
-      android:hint="Message"
-      android:layout_width="match_parent"
-      android:layout_height="0dp"
-      android:layout_weight="1"
-      android:id="@+id/edtMessage" />
-  <Button
-      android:text="Send"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:background="#498b24"
-      android:padding="5dp"
-      android:textColor="#FFF"
-      android:layout_marginBottom="5dp"
-      android:id="@+id/btnSend" />
-  <Button
-      android:text="Send Message"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:background="#498b24"
-      android:padding="5dp"
-      android:textColor="#FFF"
-      android:layout_marginBottom="5dp"
-      android:id="@+id/myButton" />
+    <EditText
+        android:hint="To"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtTo" />
+    <EditText
+        android:hint="Subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtSubject" />
+    <EditText
+        android:hint="Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/edtMessage" />
+    <Button
+        android:text="Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#498b24"
+        android:padding="5dp"
+        android:textColor="#FFF"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/btnSend" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#498b24"
+        android:padding="5dp"
+        android:textColor="#FFF"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/btnPicSend"
+        android:drawableLeft="@drawable/test" />
 </LinearLayout>

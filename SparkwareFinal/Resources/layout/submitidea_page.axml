@@ -43,21 +43,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RadioGroup>
-      <EditText
+    <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtEnterFeedback"
-  android:hint="Describe your idea in depth."/>   
+        android:hint="Describe your idea in depth." />
     <EditText
         android:inputType="textWebEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/EdtEnterEmail"
-  android:hint="Enter your E-mail address."/>
+        android:id="@+id/txtEnterEmail"
+        android:hint="Enter your E-mail address." />
     <Button
         android:text="Submit Idea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnSubmitIdea" />
+    <Button
+        android:text="Check Connection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCheckConnection" />
+  <Button
+    android:text="Read Idea Out Loud"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnReadIdea"/>
 </LinearLayout>

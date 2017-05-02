@@ -4,8 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="Track your Account Settings"
+        android:text="Account Info Page"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000" />
+    <TextView
+        android:text="Track your Account Settings"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textAccountTrack"
         android:textSize="25sp" />
@@ -17,11 +22,31 @@
         android:padding="5dp"
         android:textColor="#FFF"
         android:layout_marginBottom="5dp"
-        android:id="@+id/btnPicSend"
+        android:id="@+id/btnAccount"
         android:drawableLeft="@drawable/account" />
-    <EditText
-        android:hint=" "
-        android:layout_width="match_parent"
+    <TextView
+        android:text="User Name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edtMessage" />
+        android:id="@+id/txtVAccFirstName" />
+    <EditText
+        android:hint="Enter new user name here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtVAccFirstName" />
+    <TextView
+        android:text="Content 2 here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtVAccContent2" />
+    <EditText
+        android:hint="Enter content 2 here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtVAccContent2" />
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAccSAve" />
 </LinearLayout>

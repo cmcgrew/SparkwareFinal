@@ -22,13 +22,20 @@ namespace SparkwareFinal
         Innovation innovation4;
         Innovation innovation5;
         List<Innovation> selectedInnovation;
+        EditText commentEditText;
+        TextView commentTextView;
+        Button commentButton;
+        string commentContent;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             InstantiateVariables();
             base.OnCreate(savedInstanceState);
-
             SetContentView(Resource.Layout.enrollment_page);
+
+            commentEditText = FindViewById<EditText>(Resource.Id.commentEditText);
+            commentTextView = FindViewById<TextView>(Resource.Id.commentTextView);
+            commentButton = FindViewById<Button>(Resource.Id.commentButton);
 
             ImageView innovationImage = FindViewById<ImageView>(Resource.Id.innovationImage);
             TextView innovationDescriptionLong = FindViewById<TextView>(Resource.Id.innovationDescriptionLong);
@@ -39,6 +46,16 @@ namespace SparkwareFinal
 
             innovationImage.SetBackgroundResource(selectedInnovation[0].ImageId);
             innovationDescriptionLong.Text = selectedInnovation[0].DescriptionLong;
+
+            commentButton.Click += CommentButton_Click;
+        }
+
+        private void CommentButton_Click(object sender, EventArgs e)
+        {
+            commentTextView.Text = commentEditText.Text.ToString();
+            commentEditText.Visibility = ViewStates.Gone;
+            commentTextView.Visibility = ViewStates.Visible;
+            commentButton.Visibility = ViewStates.Gone;
         }
 
         private void InstantiateVariables()
