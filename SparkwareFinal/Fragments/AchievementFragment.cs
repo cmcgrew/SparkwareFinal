@@ -17,7 +17,7 @@ namespace SparkwareFinal.Fragments
 {
     public class AchievementFragment : Android.Support.V4.App.Fragment
     {
-         User mUser = new User();
+        string myString = "";
         
         
         public override void OnCreate(Bundle savedInstanceState)
@@ -35,12 +35,10 @@ namespace SparkwareFinal.Fragments
             //mUser = JsonConvert.DeserializeObject<User>(this.Activity.Intent.GetStringExtra("user"));
             var imageView = view.FindViewById<ImageView>(Resource.Id.imageView1);
 
-            imageView.SetImageResource(Resource.Drawable.locks1);
+            //mFragUtility.Arguments = utilBundle;
+            //imageView.SetImageResource(Resource.Drawable.locks1);
+            
 
-            //TextView newText = new TextView(this.Activity);
-           // EditText mUserLbl = view.FindViewById<EditText>(Resource.Id.textView2);
-
-          //  newText.Text = mUser.Login;
 
             return view;
         }

@@ -28,7 +28,8 @@ namespace SparkwareFinal
         private PatentTreeFragment mPatentTreeFragment;
         protected actEmail emailPage;
 
-        private User mUser = new User();
+
+        bool receivedBadge = false;
 
         //This keeps track of the "stack" of pages so that the back button works correctly... bugs out if not used
         private Stack<SupportFragment> mStackFragment;
@@ -91,7 +92,7 @@ namespace SparkwareFinal
             MenuInflater.Inflate(Resource.Menu.top_menus, menu);
             return base.OnCreateOptionsMenu(menu);
         }
-
+        public string BadgeAchieved { get; set; }
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             var sendEmail = new Intent(this, typeof(actEmail));
@@ -116,8 +117,11 @@ namespace SparkwareFinal
                     SupportActionBar.Title = "Submit Idea";
                     return true;
                 case Resource.Id.account:
+                    
                     ShowFragment(mMyAccountFragment);
                     SupportActionBar.Title = "My Account";
+                    
+                    
                     return true;
                 case Resource.Id.patentTree:
                     ShowFragment(mPatentTreeFragment);

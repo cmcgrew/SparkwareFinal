@@ -7,6 +7,7 @@ using System.Net;
 using Android.App;
 using Android.Content;
 using Plugin.TextToSpeech;
+using Newtonsoft.Json;
 
 namespace SparkwareFinal.Fragments
 {
@@ -15,6 +16,7 @@ namespace SparkwareFinal.Fragments
         public EditText edtFeedBackText;
         public EditText edtEmailText;
         public Button btnReadEmailText;
+        bool receivedBadge = false;
 
         int counter = 0;
 
@@ -54,30 +56,38 @@ namespace SparkwareFinal.Fragments
         {
             if (edtFeedBackText.Text.Length > 0 && edtEmailText.Text.Length > 0)
             {
-                ImageView badge1 = new ImageView(Activity);
                 AlertDialog.Builder alert = new AlertDialog.Builder(Activity);
                 AlertDialog myAlert = alert.Create();
-                myAlert.SetTitle("Badge Earned!");
-                myAlert.SetMessage("First feedback badge earned!");
-                myAlert.SetIcon(Resource.Drawable.badge1);
-                myAlert.SetButton("Awesome!", (s, ev) =>
+                if (receivedBadge == false)
                 {
-                    Toast.MakeText(Activity, "Badge Earned!", ToastLength.Long).Show();
-                });
-
+                    ImageView badge1 = new ImageView(Activity);
+                    myAlert.SetTitle("Badge Earned!");
+                    myAlert.SetMessage("First feedback badge earned!");
+                    myAlert.SetIcon(Resource.Drawable.badge1);
+                    myAlert.SetButton("Awesome!", (s, ev) =>
+                    {
+                        Toast.MakeText(Activity, "Badge Earned!", ToastLength.Long).Show();
+                    });
+                    receivedBadge = true;
+                    Intent intent = new Intent(this.Activity, typeof(MainActivity));
+                    intent.PutExtra("badge", receivedBadge);
+                }
+                else
+                {
+                    myAlert.SetTitle("Thank you!");
+                    myAlert.SetMessage("Thank you for your feedback!");
+                    myAlert.SetButton("Continue", (s, ev) =>
+                    {
+                        Toast.MakeText(Activity, "Thank You", ToastLength.Long).Show();
+                    });
+                }
                 while (counter == 0)
                 {
                     myAlert.Show();
                     counter++;
                 }
 
-                if (counter > 0)
-                {
-                    {
-
-                        Toast.MakeText(Activity, "You have already earned this badge. On to the next one!", ToastLength.Long).Show();
-                    }
-                }
+                
                 {
                     Intent intent = new Intent(this.Activity, typeof(actEmail));
                     StartActivity(intent);
