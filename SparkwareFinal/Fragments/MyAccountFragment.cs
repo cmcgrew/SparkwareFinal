@@ -14,12 +14,14 @@ using Android.Support.V4.View;
 using Android.Support.V4.App;
 using Android.Graphics;
 using Android.Graphics.Drawables;
+using Newtonsoft.Json;
 
 namespace SparkwareFinal.Fragments
 {
     public class MyAccountFragment : Android.Support.V4.App.Fragment
     {
         private FragmentTabHost mTabHost;
+        User mUser = new User();
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -33,7 +35,7 @@ namespace SparkwareFinal.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.myaccount_page, container, false);
-
+            mUser = JsonConvert.DeserializeObject<User>(this.Activity.Intent.GetStringExtra("user"));
             mTabHost = view.FindViewById<FragmentTabHost>(Resource.Id.tabhost); 
 
             mTabHost.Setup(this.Activity, ChildFragmentManager, Resource.Id.realtabcontent);

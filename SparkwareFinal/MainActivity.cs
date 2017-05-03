@@ -11,6 +11,9 @@ using System.Collections.Generic;
 using Plugin.Messaging;
 using System.Net;
 using Android.Content;
+using Newtonsoft.Json;
+
+using Android.Content;
 namespace SparkwareFinal
 {
     [Activity(Label = "SparkwareFinal")]
@@ -24,6 +27,8 @@ namespace SparkwareFinal
         private MyAccountFragment mMyAccountFragment;
         private PatentTreeFragment mPatentTreeFragment;
         protected actEmail emailPage;
+
+        private User mUser = new User();
 
         //This keeps track of the "stack" of pages so that the back button works correctly... bugs out if not used
         private Stack<SupportFragment> mStackFragment;
@@ -104,6 +109,9 @@ namespace SparkwareFinal
                     SupportActionBar.Title = "Discover";
                     return true;
                 case Resource.Id.submitidea:
+                    //IList<string> users = Intent.GetStringArrayListExtra("users") ;
+                   // Intent submitIdeaFragment = new Intent(this, typeof(SubmitIdeaFragment));
+                   // submitIdeaFragment.PutStringArrayListExtra("users", (IList<string>)users);
                     ShowFragment(mSubmitIdeaFragment);
                     SupportActionBar.Title = "Submit Idea";
                     return true;

@@ -1,10 +1,14 @@
 using System;
 using Android.OS;
+
 using Android.Views;
 using Android.Widget;
 using Plugin.Messaging;
 using System.Net;
 using Android.App;
+using System.Collections.Generic;
+using Android.Content;
+using Newtonsoft.Json;
 using Android.Content;
 using Plugin.TextToSpeech;
 
@@ -21,13 +25,14 @@ namespace SparkwareFinal.Fragments
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
             // Create your fragment here
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.submitidea_page, container, false);
-            
+
             Button submitIdeaButton = view.FindViewById<Button>(Resource.Id.btnSubmitIdea);
             submitIdeaButton.Click += SubmitIdeaButon_Click;
             //submitIdeaButton.Click += StartEmailActivity;
@@ -52,7 +57,23 @@ namespace SparkwareFinal.Fragments
         //Need to know if we can send emails
         private void SubmitIdeaButon_Click(object sender, EventArgs e)
         {
-            if  (edtFeedBackText.Text.Length > 0 && edtEmailText.Text.Length > 0)
+            Intent intentObject = new Intent();
+
+            try
+            {
+                //**************************************************************
+                //Step 4: Create a temporary data type (mUser) to hold the the object you serialized
+                //Step 5: Deserialize with the following code:
+                mUser = JsonConvert.DeserializeObject<User>(this.Activity.Intent.GetStringExtra("user"));
+                //Step 6: Data has been passed
+
+
+            }
+            catch (System.ArgumentNullException ex)
+            {
+
+            }
+            if (mUser.Badges[0] == "false")
             {
                 ImageView badge1 = new ImageView(Activity);
                 AlertDialog.Builder alert = new AlertDialog.Builder(Activity);
@@ -62,8 +83,9 @@ namespace SparkwareFinal.Fragments
                 myAlert.SetIcon(Resource.Drawable.badge1);
                 myAlert.SetButton("Awesome!", (s, ev) =>
                 {
-                    Toast.MakeText(Activity, "Badge Earned!", ToastLength.Long).Show();                    
+                    Toast.MakeText(Activity, "Badge Earned!", ToastLength.Long).Show();
                 });
+                mUser.Badges[0] = "true";
 
                 while (counter==0)
                 {
@@ -89,6 +111,14 @@ namespace SparkwareFinal.Fragments
                 {
                     Toast.MakeText(Activity, "Feedback field cannot be empty!", ToastLength.Long).Show();
                 };
+            }
+        }
+                myAlert.Show();
+
+                Intent mainActivity2 = new Intent(this.Activity, typeof(MainActivity));
+                mainActivity2.PutExtra("user1", JsonConvert.SerializeObject(mUser));
+
+                SendEmail();
             }
         }
 
