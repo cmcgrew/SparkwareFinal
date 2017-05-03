@@ -41,6 +41,7 @@ namespace SparkwareFinal
 
             mStackFragment = new Stack<SupportFragment>();
 
+            
             //var varEmailPage = FindViewById<Toolbar>(Resource.Id.toolbar);
             //SetActionBar(varTopToolbar);
             //ActionBar.Title = "SPARKWARE"
