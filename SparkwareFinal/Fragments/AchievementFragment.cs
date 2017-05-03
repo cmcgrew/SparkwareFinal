@@ -32,15 +32,15 @@ namespace SparkwareFinal.Fragments
             
             View view = inflater.Inflate(Resource.Layout.achievement_page, container, false);
 
-            mUser = JsonConvert.DeserializeObject<User>(this.Activity.Intent.GetStringExtra("user"));
+            //mUser = JsonConvert.DeserializeObject<User>(this.Activity.Intent.GetStringExtra("user"));
             var imageView = view.FindViewById<ImageView>(Resource.Id.imageView1);
 
             imageView.SetImageResource(Resource.Drawable.locks1);
 
-            TextView newText = new TextView(this.Activity);
+            //TextView newText = new TextView(this.Activity);
            // EditText mUserLbl = view.FindViewById<EditText>(Resource.Id.textView2);
 
-            newText.Text = mUser.Login;
+          //  newText.Text = mUser.Login;
 
             return view;
         }
